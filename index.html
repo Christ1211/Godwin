@@ -1,161 +1,1612 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-home-url="https://modernartcollective.com/" data-ajax-url="https://modernartcollective.com/wp-admin/admin-ajax.php" data-page-color-class="color-scheme-light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GODWIN RESIDENTIAL CONSTRUCTION</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <title>Godwin | Residential Construction</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Godwin Residential Construction is a premier construction firm specializing in custom homes, renovations, and residential projects based in New York City.">
+  <meta name="keywords" content="residential construction, custom homes, renovations, contractors, New York">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="turbo-cache-control" content="no-cache">
+  
+<meta property="og:url" content="https://godwinrc.com/">
+<meta property="og:description" content="Godwin Residential Construction is a premier construction firm specializing in custom homes, renovations, and residential projects based in New York City.">
+<meta property="og:title" content="Godwin | Residential Construction">
+<meta property="og:site_name" content="Godwin Residential Construction">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://godwinrc.com/">
+<meta name="twitter:title" content="Godwin | Residential Construction">
+<meta name="twitter:description" content="Godwin Residential Construction is a premier construction firm specializing in custom homes, renovations, and residential projects based in New York City.">
   <style>
-    body {
-      font-family: "", monospace;
+    @font-face {
+      font-family: 'Gotham';
+      src: url('fonts/GothamBook.otf') format('otf'),
+           url('fonts/GothamBook.otf') format('otf');
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Gotham';
+      src: url('fonts/Gotham-Light.ttf') format('ttf'),
+           url('fonts/Gotham-Light.ttf') format('ttf');
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Gotham';
+      src: url('fonts/GothamMedium.otf') format('otf'),
+           url('fonts/GothamMedium.otf') format('otf');
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    :root {
+      --page-color: #dc2626;
+      --accent-color: #ef4444;
+      --text-light: #f8f9fa;
+      --text-dark: #2d3436;
+      --gradient-primary: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+      --gradient-secondary: linear-gradient(135deg, #f87171 0%, #dc2626 100%);
+      --gradient-tertiary: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    }
+    
+    * {
       margin: 0;
       padding: 0;
-      background-color: #faf4ec;
-      color: #4a403a;
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Gotham', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+      color: #f8f9fa;
       line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
     }
 
-    header {
-      padding: 2rem 1rem 10rem;
-      text-align: center;
-      border-bottom: 1px solid #eee;
+    .body__inner {
+      min-height: 100vh;
+      position: relative;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
     }
 
-    header img {
-      height: 120px;
-      margin-bottom: 10px;
+    /* Animated Background */
+    .body__inner::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(239, 68, 68, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(248, 113, 113, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 60% 70%, rgba(255, 107, 107, 0.25) 0%, transparent 50%);
+      animation: float 20s ease-in-out infinite;
+      pointer-events: none;
+      z-index: -1;
     }
 
-    h1 {
-      margin: 5.5rem 0 0;
-      font-size: 2rem;
-      letter-spacing: 1px;  
+    @keyframes float {
+      0%, 100% { 
+        background: 
+          radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.4) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(239, 68, 68, 0.3) 0%, transparent 50%),
+          radial-gradient(circle at 40% 40%, rgba(248, 113, 113, 0.2) 0%, transparent 50%),
+          radial-gradient(circle at 60% 70%, rgba(255, 107, 107, 0.25) 0%, transparent 50%);
+      }
+      50% { 
+        background: 
+          radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.5) 0%, transparent 50%),
+          radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.4) 0%, transparent 50%),
+          radial-gradient(circle at 60% 60%, rgba(248, 113, 113, 0.3) 0%, transparent 50%),
+          radial-gradient(circle at 30% 30%, rgba(255, 107, 107, 0.3) 0%, transparent 50%);
+      }
     }
 
-    nav {
-      text-align: right;
-      padding: 1rem 0;
+    /* Header Styles */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: transparent;
+      padding: 25px 0;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 100%;
+      backdrop-filter: blur(0px);
     }
 
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #6a6a6a;
-      font-weight: bold;
-      transition: color 0.2s ease;
+    .header.scrolled {
+background-color: black; /* solid background */
+
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(248, 249, 250, 0.1);
+      padding: 15px 0;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 
-    nav a:hover {
-      color: #705C53;
+    .header:hover {
+      background: transparent;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    .header.scrolled:hover {
+      background: linear-gradient(135deg, rgba(12, 12, 12, 0.95) 0%, rgba(26, 26, 46, 0.95) 50%, rgba(22, 33, 62, 0.95) 100%);
     }
 
-    .post {
-      margin-bottom: 3rem;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 2rem;
-    }
-
-    .post img {
+    .site-padding {
+      padding: 0 15px;
+      width: 100%;
       max-width: 100%;
-      border-radius: 8px;
-      margin-top: 1rem;
     }
 
-    .post h2 {
-      margin-bottom: 0.5rem;
-      font-size: 1.5rem;
+    .container-fluid {
+      max-width: none;
+      margin: 0;
+      width: 100%;
+      padding: 0;
     }
 
-    .post p {
-      color: #555;
+    .header .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
     }
 
-    footer {
+    .row {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+    }
+
+    .col {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .col-auto {
+      flex: 0 0 auto;
+    }
+
+    .ml-auto {
+      margin-left: auto;
+    }
+
+    .header__logo-container {
+      margin-left: 0;
+    }
+
+    .header__logo {
+      display: inline-block;
+      font-family: 'Gotham', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 500;
+      color: #f8f9fa;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      line-height: 1;
+    }
+
+    .header__logo:hover {
+      transform: scale(1.05);
+      color: #f8f9fa;
+    }
+
+    .header__logo-main {
+      font-size: 24px;
+      font-weight: 500;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .header__logo-sub {
+      font-size: 10px;
+      font-weight: 300;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px;
+      opacity: 0.9;
+    }
+
+    .header__menu-container {
+      margin-right: 0;
+    }
+
+    .header__menu-button {
+      background: rgba(248, 249, 250, 0.1);
+      border: 2px solid rgba(248, 249, 250, 0.2);
+      color: #f8f9fa;
+      padding: 12px 24px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header__menu-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-primary);
+      transition: left 0.4s ease;
+      z-index: -1;
+    }
+
+    .header__menu-button:hover::before {
+      left: 0;
+    }
+
+    .header__menu-button:hover {
+      border-color: rgba(248, 249, 250, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+
+    /* Navigation - Desktop Right Side Panel */
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 400px;
+      height: 100vh;
+      background: linear-gradient(135deg, rgba(12, 12, 12, 0.98) 0%, rgba(26, 26, 46, 0.98) 100%);
+      backdrop-filter: blur(30px);
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: -10px 0 50px rgba(0, 0, 0, 0.3);
+      border-left: 1px solid rgba(248, 249, 250, 0.1);
+    }
+
+    .nav.active {
+      right: 0;
+    }
+
+    /* Mobile Navigation - Full Screen */
+    @media (max-width: 768px) {
+      .nav {
+        width: 100%;
+        right: -100%;
+        left: auto;
+        box-shadow: none;
+        border-left: none;
+      }
+      
+      .nav.active {
+        right: 0;
+        left: 0;
+      }
+    }
+
+    .nav__header {
+      padding: 25px 30px;
+      text-align: right;
+      border-bottom: 1px solid rgba(248, 249, 250, 0.1);
+    }
+
+    .nav__header__close-button {
+      background: none;
+      border: 2px solid rgba(248, 249, 250, 0.3);
+      color: #f8f9fa;
+      cursor: pointer;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .nav__header__close-button:hover {
+      background: rgba(248, 249, 250, 0.1);
+      transform: scale(1.05);
+    }
+
+    .nav__menu {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 30px;
+    }
+
+    .nav__menu ul {
+      list-style: none;
+    }
+
+    .nav__menu li {
+      margin: 25px 0;
+      transform: translateX(50px);
+      opacity: 0;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav.active .nav__menu li {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .nav.active .nav__menu li:nth-child(1) { transition-delay: 0.1s; }
+    .nav.active .nav__menu li:nth-child(2) { transition-delay: 0.2s; }
+    .nav.active .nav__menu li:nth-child(3) { transition-delay: 0.3s; }
+    .nav.active .nav__menu li:nth-child(4) { transition-delay: 0.4s; }
+
+    .nav__menu a {
+      color: #f8f9fa;
+      text-decoration: none;
+      font-size: 36px;
+      font-weight: 300;
+      font-family: 'Gotham', sans-serif;
+      transition: all 0.4s ease;
+      position: relative;
+      display: inline-block;
+      text-align: right;
+      width: 100%;
+    }
+
+    .nav__menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gradient-primary);
+      transition: all 0.4s ease;
+    }
+
+    .nav__menu a:hover {
+      color: #f8f9fa;
+      transform: translateX(-10px);
+    }
+
+    .nav__menu a:hover::after {
+      width: 100%;
+    }
+
+    /* Mobile adjustments for nav menu */
+    @media (max-width: 768px) {
+      .nav__menu {
+        text-align: center;
+        padding: 20px;
+      }
+      
+      .nav__menu a {
+        font-size: clamp(28px, 8vw, 48px);
+        text-align: center;
+      }
+      
+      .nav__menu a::after {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+      }
+      
+      .nav__menu a:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(248, 249, 250, 0.3), transparent);
+      margin: 20px 0;
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .carousel {
+      height: 100%;
+      position: relative;
+      width: 100%;
+    }
+
+    .carousel__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: scale(1.1);
+      transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1;
+    }
+
+    .carousel__item.active {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 2;
+    }
+
+    .carousel__item.prev {
+      opacity: 0;
+      transform: translateX(-100%) scale(0.9);
+    }
+
+    .carousel__item.next {
+      opacity: 0;
+      transform: translateX(100%) scale(0.9);
+    }
+
+    .carousel.slide-left .carousel__item {
+      transform: translateX(100%);
+    }
+
+    .carousel.slide-left .carousel__item.active {
+      transform: translateX(0);
+    }
+
+    .carousel.slide-left .carousel__item.prev {
+      transform: translateX(-100%);
+    }
+
+    .carousel.zoom-fade .carousel__item {
+      transform: scale(1.2);
+      filter: blur(2px);
+    }
+
+    .carousel.zoom-fade .carousel__item.active {
+      transform: scale(1);
+      filter: blur(0);
+    }
+
+    .carousel.rotate-3d .carousel__item {
+      transform: perspective(1000px) rotateY(45deg) scale(0.8);
+      transform-origin: center center;
+    }
+
+    .carousel.rotate-3d .carousel__item.active {
+      transform: perspective(1000px) rotateY(0deg) scale(1);
+    }
+
+    .carousel.rotate-3d .carousel__item.prev {
+      transform: perspective(1000px) rotateY(-45deg) scale(0.8);
+    }
+
+    .gallery-carousel__image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-color: #474e52;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 150px;
+      color: rgba(248, 249, 250, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__scroll-indicator {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #aaa;
-      border-top: 1px solid #eee;
+      color: rgba(248, 249, 250, 0.8);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .hero__scroll-indicator__line {
+      width: 2px;
+      height: 80px;
+      background: linear-gradient(to bottom, rgba(248, 249, 250, 0.8), transparent);
+      margin: 20px auto 0;
+      animation: scroll-bounce 3s infinite;
+    }
+
+    @keyframes scroll-bounce {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(20px); opacity: 0.3; }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out 1s forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 1.5s;
+    }
+
+    .delay-2 {
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .scrim-bottom::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 300px;
+      background: linear-gradient(transparent, rgba(12, 12, 12, 0.9));
+      pointer-events: none;
+    }
+
+    /* Content Sections */
+    .content-block {
+      padding: 120px 0;
+      position: relative;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .content-block--first {
+      padding-top: 0;
+    }
+
+    .content-block--last {
+      padding-bottom: 120px;
+    }
+
+    .content-block--collapse-top-margin {
+      padding-top: 80px;
+    }
+
+    .content-block--collapse-bottom-margin {
+      padding-bottom: 80px;
+    }
+
+    .large-text-block__text {
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 300;
+      line-height: 1.2;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      font-family: 'Gotham', sans-serif;
+      color: #f8f9fa;
+      word-wrap: break-word;
+    }
+
+    .h2 {
+      font-size: clamp(48px, 8vw, 80px);
+      font-weight: 300;
+      color: #f8f9fa;
+      margin: 0;
+      font-family: 'Gotham', sans-serif;
+      word-wrap: break-word;
+    }
+
+    .text-color-lighter {
+      color: #f8f9fa;
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .arrow-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      padding: 15px 30px;
+      border: 2px solid rgba(248, 249, 250, 0.3);
+      border-radius: 50px;
+      background: rgba(248, 249, 250, 0.1);
+      color: #f8f9fa;
+      word-wrap: break-word;
+    }
+
+    .arrow-link:hover {
+      color: #f8f9fa;
+      border-color: #f8f9fa;
+      background: rgba(248, 249, 250, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(248, 249, 250, 0.3);
+    }
+
+    .arrow-link svg {
+      width: 25px;
+      height: 16px;
+      transition: transform 0.4s ease;
+      flex-shrink: 0;
+    }
+
+    .arrow-link:hover svg {
+      transform: translateX(8px);
+    }
+
+    /* Featured Projects */
+    .featured-projects__project-row {
+      margin-bottom: 100px;
+      width: 100%;
+    }
+
+    .project-card__large-link {
+      display: block;
+      text-decoration: none;
+      margin-bottom: 40px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .project-card__inner {
+      position: relative;
+      max-height: 1000px;
+      min-height: 500px;
+      overflow: hidden;
+      border-radius: 20px;
+      width: 100%;
+    }
+
+    .tall-portrait-image,
+    .landscape-image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-color: #474e52;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 150px;
+      color: rgba(248, 249, 250, 0.9);
+      position: relative;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .show-on-portrait {
+      display: block;
+    }
+
+    .show-on-landscape {
+      display: none;
+    }
+
+    @media (orientation: landscape) and (min-width: 768px) {
+      .show-on-portrait {
+        display: none;
+      }
+      .show-on-landscape {
+        display: block;
+      }
+    }
+
+    .h4 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 400;
+      color: #f8f9fa;
+      margin: 0;
+      font-family: 'Gotham', sans-serif;
+      word-wrap: break-word;
+    }
+
+    .project__categories ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .project-category-list li a {
+      color: #f8f9fa;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border: 1px solid rgba(248, 249, 250, 0.3);
+      border-radius: 25px;
+      background: rgba(248, 249, 250, 0.1);
+      white-space: nowrap;
+    }
+
+    .project-category-list li a:hover {
+      color: #f8f9fa;
+      border-color: #f8f9fa;
+      background: rgba(248, 249, 250, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .small-label {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+    }
+
+    .fw-bold {
+      font-weight: 600;
+    }
+
+    .text-uppercase {
+      text-transform: uppercase;
+    }
+
+    /* Call to Action */
+    .h4-plus {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 400;
+      line-height: 1.3;
+      font-family: 'Gotham', sans-serif;
+      color: #f8f9fa;
+      word-wrap: break-word;
+    }
+
+    .fs-italic {
+      font-style: italic;
+    }
+
+    .h5-small {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(248, 249, 250, 0.8);
+      word-wrap: break-word;
+    }
+
+    .text-max-width-large {
+      max-width: 900px;
+    }
+
+    .mt-3 { margin-top: 30px; }
+    .mt-4 { margin-top: 40px; }
+    .mt-5 { margin-top: 50px; }
+    .mb-3 { margin-bottom: 30px; }
+    .mb-4 { margin-bottom: 40px; }
+    .mb-5 { margin-bottom: 50px; }
+    .mt-2 { margin-top: 20px; }
+    .mt-md-3 { margin-top: 30px; }
+    .mb-md-5 { margin-bottom: 50px; }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(12, 12, 12, 0.9) 100%);
+      backdrop-filter: blur(20px);
+      padding: 60px 0;
+      border-top: 1px solid rgba(248, 249, 250, 0.1);
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .footer__logo {
+      font-family: 'Gotham', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #f8f9fa;
+    }
+
+    .fine-print {
+      font-size: 12px;
+      color: rgba(248, 249, 250, 0.6);
+      letter-spacing: 1px;
+    }
+
+    .inline-list {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer__menu ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer__menu a {
+      color: rgba(248, 249, 250, 0.7);
+      text-decoration: none;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .footer__menu a:hover {
+      color: #f8f9fa;
+      transform: translateY(-2px);
+    }
+
+    /* Mobile-specific fixes */
+    @media (max-width: 768px) {
+      html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+      }
+
+      .site-padding {
+        padding: 0 15px;
+      }
+
+      .header__logo-main {
+        font-size: clamp(18px, 5vw, 24px);
+        letter-spacing: 1px;
+      }
+
+      .header__logo-sub {
+        font-size: clamp(8px, 2.5vw, 10px);
+      }
+
+      .header__menu-button {
+        padding: 10px 20px;
+        font-size: 10px;
+      }
+
+      .large-text-block__text {
+        font-size: clamp(24px, 7vw, 48px);
+        padding: 0 5px;
+      }
+
+      .h2 {
+        font-size: clamp(32px, 8vw, 56px);
+      }
+
+      .h4 {
+        font-size: clamp(20px, 6vw, 32px);
+      }
+
+      .project-card__inner {
+        height: 60vh;
+        min-height: 400px;
+      }
+
+      .project__categories ul {
+        justify-content: flex-start;
+        gap: 15px;
+      }
+
+      .project-category-list li a {
+        padding: 6px 12px;
+        font-size: 10px;
+      }
+
+      .inline-list {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .footer__menu ul {
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .arrow-link {
+        padding: 12px 20px;
+        gap: 10px;
+      }
+
+      .h4-plus {
+        font-size: clamp(24px, 6vw, 40px);
+      }
+
+      .h5-small {
+        font-size: 18px;
+      }
+
+      .content-block {
+        padding: 80px 0;
+      }
+
+      /* Ensure no horizontal overflow */
+      * {
+        max-width: 100vw;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .d-md-block {
+        display: block;
+      }
+
+      .d-md-none {
+        display: none;
+      }
+    }
+
+    /* Additional mobile overflow fixes */
+    @media (max-width: 480px) {
+      .site-padding {
+        padding: 0 10px;
+      }
+
+      .header__logo-main {
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+
+      .header__logo-sub {
+        font-size: 8px;
+      }
+
+      .arrow-link {
+        padding: 10px 16px;
+        font-size: 10px;
+      }
+
+      .large-text-block__text {
+        font-size: clamp(20px, 6vw, 36px);
+      }
+    }
+
+    /* Scroll Reveal Animations */
+    .scroll-reveal--opacity {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .scroll-reveal--opacity.visible {
+      opacity: 1;
+    }
+
+    .scroll-reveal--transform {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+
+    .scroll-reveal--transform.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Utility Classes */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .d-flex { display: flex; }
+    .flex-column { flex-direction: column; }
+    .justify-content-center { justify-content: center; }
+    .align-items-center { align-items: center; }
+    .align-items-baseline { align-items: baseline; }
+    .text-center { text-align: center; }
+    .blank-link, .blank-link:hover { color: inherit; text-decoration: none; }
+    .blank-link-hover:hover { color: #f8f9fa; }
+    .opacity-link:hover { opacity: 0.7; }
+    .default-styles p { margin-bottom: 1.2em; }
+    .larger-on-mobile { font-size: 16px; }
+    .accent-color { color: #f8f9fa; }
+    .h3 { font-size: 36px; font-weight: 300; font-family: 'Gotham', sans-serif; }
+    .h5 { font-size: 22px; font-weight: 400; }
+    .h6 { font-size: 18px; font-weight: 400; }
+    .viewport-height { height: 100vh; }
+    .background-image { background-size: cover; background-position: center; background-repeat: no-repeat; }
+    .position-relative { position: relative; }
+    .d-inline-block { display: inline-block; }
+    .d-inline-flex { display: inline-flex; }
+    .d-block { display: block; }
+
+    .d-none {
+      display: none;
+    }
+
+    .d-md-none {
+      display: block;
+    }
+
+    .d-md-block {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .d-md-block {
+        display: block;
+      }
+
+      .d-md-none {
+        display: none;
+      }
     }
   </style>
 </head>
-<body>
-  <header>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
+<body class="home art-gallery page-template-default page page-id-5 wp-theme-ethereal-art page-home" data-page-color="#ff6b6b" data-body-page-color-class="color-scheme-light">
+  <div id="body__inner" class="body__inner">
+    <header id="header" class="header d-flex flex-column justify-content-center">
+      <div class="site-padding">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col header__logo-container">
+              <a href="https://godwinrc.com/" rel="home">
+                <span class="header__logo position-relative d-inline-block">
+                  <span class="header__logo-main">G O D W I N</span>
+                  <span class="header__logo-sub">RESIDENTIAL CONSTRUCTION</span>
+                </span>
+                <span class="sr-only">Godwin | Residential Construction</span>
+              </a>
+            </div>
+            <div class="col-auto ml-auto header__menu-container">
+              <div id="header__menu-button" class="header__menu-button label blank-link-hover" onclick="toggleMenu()">
+                <div class="d-none d-md-block">MENU</div>
+                <div class="header__menu-button__mobile-icon d-md-none" aria-label="Open navigation menu">⋯</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav id="nav" class="nav">
+      <div class="nav__header">
+        <div class="nav__header__button-wrapper">
+          <div id="nav__header__close-button" class="nav__header__close-button label blank-link-hover" onclick="toggleMenu()">CLOSE</div>
+        </div>
+      </div>
+      <div id="nav__menu" class="nav__menu">
+        <div class="menu-main-menu-container">
+          <ul id="menu-main-menu" class="menu">
+            <li class="menu-item"><a href="#projects">Projects</a></li>
+            <li class="menu-item"><a href="#services">Services</a></li>
+            <li class="menu-item"><a href="#company">Company</a></li>
+            <li class="menu-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <img src="c.png" alt="Dream Home Construction" style="border-radius: 8px; position: absolute; left: 10px; top: 10px">
-    <p style="position: absolute; right: 10px">_______________________________________________________________</p>
-    <h1>G O D W I N</h1>
-    <p style="position: absolute;">_______________________________________________________________</p>
-    <p> RESIDENTIAL CONSTRUCTION</p>
-    
-    
-  </header>
-  
+    <main id="application-wrapper" class="application-wrapper">
 
-<h1>Projects</h1>
-  <div class="container">
-    <div class="post">
-      <h2>Crafting Dream Homes</h2>
-      <p>At Godwin Residential Construction, we turn your vision into a reality. Our team is committed to quality, craftsmanship, and detail in every home we build.</p>
-      
-      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-        <img src="Photos/1.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
-        <img src="Photos/2.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
-        <img src="Photos/3.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
-        <img src="Photos/4.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
-        <img src="Photos/5.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
-        <img src="Photos/6.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
-      </div>
-    </div>
-    <div class="post">
-      <h2>Modern & Minimalist Designs</h2>
-      <p>We specialize in blending timeless styles with modern aesthetics—clean lines, warm tones, and functional beauty.</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-        <img src="Photos/7.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
-        <img src="Photos/8.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
-        <img src="Photos/9.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
-        <img src="Photos/10.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
-        <img src="Photos/11.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
-        <img src="Photos/12.png" alt="Dream Home Construction" style="width: 48%; border-radius: 8px;">
+<section>
+<div class="hero scrim-bottom">
+
+    <div class="show-on-portrait">
+      <div class="carousel gallery-carousel slide-left" data-autoplay-duration="5000">
+        <div class="carousel__item active viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/mobile/2- CENTRAL PRK WEST - TREPPER NYC (2).jpg');"></div>
+        </div>
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/17- manhattan law office - Schumer (1).jpg');"></div>
+        </div>
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/12- CENTRAL PRK WEST - TREPPER NYC (10).jpg');"></div>
+        </div>
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/mobile/11- fifth ave pied-a-terre.jpg');"></div>
+        </div>
       </div>
     </div>
 
-    <div class="post">
-      <h2>Customer Satisfaction First</h2>
-      <p>From the first nail to final inspection, our focus is on delivering excellence and exceeding expectations. Our clients are part of the journey every step of the way.</p>
-      <img src="https://source.unsplash.com/800x400/?construction,team" alt="">
+    <div class="show-on-landscape">
+      <div class="carousel gallery-carousel slide-left" data-autoplay-duration="5000">
+        <div class="carousel__item active viewport-height" data-caption="">
+           <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/6- BARN HOUSE - MUDDY RUGS (1).jpg');"></div>
+        </div>
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/17- manhattan law office - Schumer (1).jpg');"></div>
+        </div>
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/13- FIFTH AVENUE APT - CHAPMAN.jpg');"></div>
+        </div>
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/17- manhattan law office - Schumer.jpg');"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll-indicator small-label text-center d-flex flex-column align-items-center">
+      <span class="fade-in delay-1">
+        <span class="opacity-link">SCROLL DOWN</span>
+      </span>
+      <div class="hero__scroll-indicator__line animate-down-repeat delay-2"></div>
     </div>
   </div>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</section>
 
-
-  <footer>
-    <div style="margin-bottom: 1rem;">
-      <a href="https://www.instagram.com" target="_blank" style="margin: 0 10px; color: #aaa;">
-        <i class="fab fa-instagram fa-2x"></i>
-      </a>
-      <a href="https://www.facebook.com" target="_blank" style="margin: 0 10px; color: #aaa;">
-        <i class="fab fa-facebook fa-2x"></i>
-      </a>
-      <a href="https://www.linkedin.com" target="_blank" style="margin: 0 10px; color: #aaa;">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="https://www.twitter.com" target="_blank" style="margin: 0 10px; color: #aaa;">
-        <i class="fab fa-twitter fa-2x"></i>
-      </a>
+<section class="content-block content-block--large_text_block content-block--collapse-top-margin">
+<div class="site-padding">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="scroll-reveal--transform">
+          <div class="large-text-block__text default-styles h3-plus">
+            <p><strong>Godwin Residential Construction</strong> is a premier construction firm specializing in Custom Homes, Major Renovations, and exceptional residential projects based in New York City.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    &copy; 2025 Godwin Residential Construction. All rights reserved.
-  </footer>
+  </div>
+</div>
+</section>
 
+<section class="content-block content-block--featured_projects">
+<div class="site-padding">
+  <div class="container-fluid">
+    <div class="row align-items-baseline">
+      <div class="col">
+        <h2 class="h2 scroll-reveal--opacity">
+          Selected Projects
+        </h2>
+      </div>
+      <div class="col-auto scroll-reveal--opacity">
+        <div class="d-none d-md-block">
+          <a href="#projects" class="label text-uppercase arrow-link d-inline-flex align-items-center text-color-lighter">
+            <span class="arrow-link__label">View Portfolio</span>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.2 13.4" style="enable-background:new 0 0 20.2 13.4;" xml:space="preserve">
+<path fill="#F8F9FA" class="st0-arrow-right" d="M19.5,6.7L19.9,7l0.4-0.4l-0.4-0.4L19.5,6.7z M0.5,6.2C0.2,6.2,0,6.4,0,6.7C0,7,0.2,7.2,0.5,7.2V6.2z M13.5,13.4L19.9,7l-0.7-0.7l-6.3,6.3L13.5,13.4z M19.9,6.3L13.5,0l-0.7,0.7L19.1,7L19.9,6.3z M19.5,6.2h-19v1h19V6.2z"/>
+</svg>
+          </a>
+        </div>
+        <div class="d-md-none">
+          <a href="#projects" class="label text-uppercase blank-link d-inline-flex align-items-center text-color-lighter">
+            View All
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2 mt-md-3 mb-4 mb-md-5">
+      <div class="col scroll-reveal--opacity">
+        <hr class="sr-animate-right animate-slow">
+      </div>
+    </div>
+
+    <div class="featured-projects__project-row row">
+      <div class="col">
+        <a href="#" class="project-card__large-link blank-link d-block scroll-reveal--opacity">
+          <div class="project-card__inner">
+            <div class="tall-portrait-image show-on-portrait">
+              <img src="Photos\selected projects\Country residence\1-COUNTRY RESIDENCE HABER (2).jpg" alt="Modern Estate Renovation" class="project-image">
+            </div>
+            <div class="landscape-image show-on-landscape">
+              <img src="Photos\selected projects\Country residence\1-COUNTRY RESIDENCE HABER (2).jpg" alt="Modern Estate Renovation" class="project-image">
+            </div>
+          </div>
+        </a>
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="h4">
+              <p href="#" class="blank-link-hover scroll-reveal--opacity">
+                COUNTRY RESIDENCE HABER
+              </p>
+            </h3>
+          </div>
+          <div class="col-auto d-none d-md-block">
+            <div class="project__categories">
+              <ul class="project-category-list text-uppercase small-label fw-bold text-color-lighter">
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Renovation</a>
+                </li>
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Custom Build</a>
+                </li>
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Luxury</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-projects__project-row row">
+      <div class="col">
+        <a href="#" class="project-card__large-link blank-link d-block scroll-reveal--opacity">
+          <div class="project-card__inner">
+            <div class="tall-portrait-image show-on-portrait">
+              <img src="Photos\selected projects\Fifth Avenue apartment\13- FIFTH AVENUE APT - CHAPMAN (2).jpg" alt="Custom Family Home" class="project-image">
+            </div>
+            <div class="landscape-image show-on-landscape">
+              <img src="Photos\selected projects\Fifth Avenue apartment\13- FIFTH AVENUE APT - CHAPMAN (2).jpg" alt="Custom Family Home" class="project-image">
+            </div>
+          </div>
+        </a>
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="h4">
+              <p href="#" class="blank-link-hover scroll-reveal--opacity">
+                Fifth Avenue Apartment
+              </p>
+            </h3>
+          </div>
+          <div class="col-auto d-none d-md-block">
+            <div class="project__categories">
+              <ul class="project-category-list text-uppercase small-label fw-bold text-color-lighter">
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">New Construction</a>
+                </li>
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Contemporary</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-projects__project-row row">
+      <div class="col">
+        <a href="#" class="project-card__large-link blank-link d-block scroll-reveal--opacity">
+          <div class="project-card__inner">
+            <div class="tall-portrait-image show-on-portrait">
+              <img src="Photos\selected projects\Country estate\5- COUNTRY ESTATE - COHEN (7).jpg" alt="Historic Townhouse Restoration" class="project-image">
+            </div>
+            <div class="landscape-image show-on-landscape">
+              <img src="Photos\selected projects\Country estate\5- COUNTRY ESTATE - COHEN (7).jpg" alt="Historic Townhouse Restoration" class="project-image">
+            </div>
+          </div>
+        </a>
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="h4">
+              <p href="#" class="blank-link-hover scroll-reveal--opacity">
+                Country estate
+              </p>
+            </h3>
+          </div>
+          <div class="col-auto d-none d-md-block">
+            <div class="project__categories">
+              <ul class="project-category-list text-uppercase small-label fw-bold text-color-lighter">
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Restoration</a>
+                </li>
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Historic</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-projects__project-row row">
+      <div class="col">
+        <a href="#" class="project-card__large-link blank-link d-block scroll-reveal--opacity">
+          <div class="project-card__inner">
+            <div class="tall-portrait-image show-on-portrait">
+              <img src="Photos\selected projects\Calhoun Street\11- 175 CALHOUN STREET (1)- Barn Conservation.JPG" alt="Luxury Penthouse Build" class="project-image">
+            </div>
+            <div class="landscape-image show-on-landscape">
+              <img src="Photos\selected projects\Calhoun Street\11- 175 CALHOUN STREET (1)- Barn Conservation.JPG" alt="Luxury Penthouse Build" class="project-image">
+            </div>
+          </div>
+        </a>
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="h4">
+              <p href="#" class="blank-link-hover scroll-reveal--opacity">
+                175 Calhoun street
+              </p>
+            </h3>
+          </div>
+          <div class="col-auto d-none d-md-block">
+            <div class="project__categories">
+              <ul class="project-category-list text-uppercase small-label fw-bold text-color-lighter">
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">New Construction</a>
+                </li>
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Luxury</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="content-block content-block--title_block content-block--collapse-bottom-margin">
+<div class="site-padding">
+  <div class="container-fluid">
+    <div class="row align-items-baseline">
+      <div class="col">
+        <h2 class="h2 scroll-reveal--opacity">
+          Start Your Project
+        </h2>
+      </div>
+    </div>
+    <div class="row mt-2 mt-md-3 mb-4 mb-md-5">
+      <div class="col scroll-reveal--opacity">
+        <hr class="sr-animate-right animate-slow">
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="content-block content-block--last content-block--call_to_action_text_block">
+<div class="site-padding">
+  <div class="container-fluid">
+    <div class="row scroll-reveal--transform">
+      <div class="col h4-plus default-styles fs-italic">
+        <div class="text-max-width-large">
+          Every project starts with understanding your vision.
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3 mt-md-4">
+      <div class="col h5-small default-styles scroll-reveal--transform">
+        <div class="text-max-width-large">
+          <p>At Godwin Residential Construction, we transform visions into masterfully crafted homes that reflect your lifestyle and aspirations. Our commitment to quality and detail ensures spaces that endure and inspire.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4 mt-md-5">
+      <div class="col scroll-reveal--transform">
+        <a href="mailto:INFO@GODWINRC.COM" class="label text-uppercase arrow-link d-inline-flex align-items-center text-color-lighter">
+          <span class="arrow-link__label">Email Us</span>
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.2 13.4" style="enable-background:new 0 0 20.2 13.4;" xml:space="preserve">
+<path fill="#F8F9FA" class="st0-arrow-right" d="M19.5,6.7L19.9,7l0.4-0.4l-0.4-0.4L19.5,6.7z M0.5,6.2C0.2,6.2,0,6.4,0,6.7C0,7,0.2,7.2,0.5,7.2V6.2z M13.5,13.4L19.9,7l-0.7-0.7l-6.3,6.3L13.5,13.4z M19.9,6.3L13.5,0l-0.7,0.7L19.1,7L19.9,6.3z M19.5,6.2h-19v1h19V6.2z"/>
+</svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+    </main>
+    <footer id="footer" class="footer" data-page-color-class="color-scheme-dark">
+      <div class="site-padding">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col d-flex align-items-center">
+              <a href="https://godwinrc.com/" rel="home" class="blank-link">
+                <div class="footer__logo footer__logo--desktop d-none d-md-inline-block">
+                  GODWIN RESIDENTIAL CONSTRUCTION
+                </div>
+              </a>
+              <div class="d-md-none fine-print">© 2025 GODWIN RESIDENTIAL CONSTRUCTION</div>
+            </div>
+            <div class="col-auto fine-print">
+              <ul class="inline-list text-uppercase align-items-center justify-content-center justify-content-md-left">
+                <li class="d-none d-md-inline-block">© 2025 GODWIN RESIDENTIAL CONSTRUCTION</li>
+                <div id="footer__menu" class="footer__menu">
+                  <div class="menu-footer-menu-container">
+                    <ul id="menu-footer-menu" class="menu">
+                      <li class="menu-item"><a href="#">Terms of Use</a></li>
+                      <li class="menu-item"><a href="#">Privacy Policy</a></li>
+                      <li class="menu-item"><a href="#">Accessibility</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    // Enhanced Carousel System with Multiple Transition Effects
+    class EnhancedCarousel {
+      constructor(container) {
+        this.container = container;
+        this.slides = container.querySelectorAll('.carousel__item');
+        this.currentSlide = 0;
+        this.autoplayInterval = null;
+        this.transitionType = 'slide-left';
+        this.autoplayDuration = parseInt(container.dataset.autoplayDuration) || 5000;
+        
+        this.init();
+      }
+      
+      init() {
+        this.setupInitialState();
+        this.startAutoplay();
+      }
+      
+      setupInitialState() {
+        this.slides.forEach((slide, index) => {
+          slide.classList.remove('active', 'prev', 'next');
+          if (index === 0) {
+            slide.classList.add('active');
+          }
+        });
+      }
+      
+      setTransition(type) {
+        this.transitionType = type;
+        this.container.className = `carousel gallery-carousel ${type}`;
+        this.updateSlideClasses();
+      }
+      
+      updateSlideClasses() {
+        this.slides.forEach((slide, index) => {
+          slide.classList.remove('active', 'prev', 'next');
+          
+          if (index === this.currentSlide) {
+            slide.classList.add('active');
+          } else if (index === this.getPrevIndex()) {
+            slide.classList.add('prev');
+          } else if (index === this.getNextIndex()) {
+            slide.classList.add('next');
+          }
+        });
+      }
+      
+      getPrevIndex() {
+        return this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+      }
+      
+      getNextIndex() {
+        return this.currentSlide === this.slides.length - 1 ? 0 : this.currentSlide + 1;
+      }
+      
+      nextSlide() {
+        this.currentSlide = this.getNextIndex();
+        this.updateSlideClasses();
+      }
+      
+      startAutoplay() {
+        this.stopAutoplay();
+        this.autoplayInterval = setInterval(() => {
+          this.nextSlide();
+        }, this.autoplayDuration);
+      }
+      
+      stopAutoplay() {
+        if (this.autoplayInterval) {
+          clearInterval(this.autoplayInterval);
+          this.autoplayInterval = null;
+        }
+      }
+    }
+
+    // Initialize Carousels
+    let carousels = [];
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      carousels.push(new EnhancedCarousel(carousel));
+    });
+
+    // Scroll-triggered header background
+    function handleHeaderScroll() {
+      const header = document.getElementById('header');
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleHeaderScroll);
+
+    // Menu Toggle
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('active');
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+        const nav = document.getElementById('nav');
+        nav.classList.remove('active');
+      });
+    });
+
+    // Enhanced Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -80px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal--opacity, .scroll-reveal--transform').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const nav = document.getElementById('nav');
+      const menuButton = document.getElementById('header__menu-button');
+      
+      if (!nav.contains(event.target) && !menuButton.contains(event.target)) {
+        nav.classList.remove('active');
+      }
+    });
+
+    // Subtle parallax effect
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+      }
+    });
+
+    // Pause carousel on hover
+    document.querySelectorAll('.hero').forEach(hero => {
+      hero.addEventListener('mouseenter', () => {
+        carousels.forEach(carousel => carousel.stopAutoplay());
+      });
+      
+      hero.addEventListener('mouseleave', () => {
+        carousels.forEach(carousel => carousel.startAutoplay());
+      });
+    });
+  </script>
 </body>
 </html>
