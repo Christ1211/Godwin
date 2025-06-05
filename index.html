@@ -1,19 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-home-url="https://modernartcollective.com/" data-ajax-url="https://modernartcollective.com/wp-admin/admin-ajax.php" data-page-color-class="color-scheme-light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GODWIN RESIDENTIAL CONSTRUCTION</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <title>Godwin | Residential Construction</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Godwin Residential Construction is a premier construction firm specializing in custom homes, renovations, and residential projects based in New York City.">
+  <meta name="keywords" content="residential construction, custom homes, renovations, contractors, New York">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="turbo-cache-control" content="no-cache">
+  
+<meta property="og:url" content="https://godwinrc.com/">
+<meta property="og:description" content="Godwin Residential Construction is a premier construction firm specializing in custom homes, renovations, and residential projects based in New York City.">
+<meta property="og:title" content="Godwin | Residential Construction">
+<meta property="og:site_name" content="Godwin Residential Construction">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://godwinrc.com/">
+<meta name="twitter:title" content="Godwin | Residential Construction">
+<meta name="twitter:description" content="Godwin Residential Construction is a premier construction firm specializing in custom homes, renovations, and residential projects based in New York City.">
   <style>
+    @font-face {
+      font-family: 'Gotham';
+      src: url('fonts/GothamBook.otf') format('otf'),
+           url('fonts/GothamBook.otf') format('otf');
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Gotham';
+      src: url('fonts/Gotham-Light.ttf') format('ttf'),
+           url('fonts/Gotham-Light.ttf') format('ttf');
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Gotham';
+      src: url('fonts/GothamMedium.otf') format('otf'),
+           url('fonts/GothamMedium.otf') format('otf');
+      font-weight: 500;
+      font-style: normal;
+    }
+    
     :root {
-      --white: #ffffff;
-      --black: #000000;
-      --gray: #f0f0f0;
-      --light-gray: #f8f8f8;
-      --text: #2a2a2a;
-      --text-light: #757575;
-      --transition: all 0.3s ease;
+      --primary-red: #dc2626;
+      --text-white: #ffffff;
+      --text-gray: #a1a1aa;
+      --background-dark: #1a1919;
+      --background-medium: #1a1919;
     }
     
     * {
@@ -21,707 +60,1397 @@
       padding: 0;
       box-sizing: border-box;
     }
-    
-    body {
-      font-family: 'Helvetica Neue', sans-serif;
-      color: var(--text);
-      line-height: 1.5;
-      background-color: var(--white);
-      -webkit-font-smoothing: antialiased;
+
+    html {
       overflow-x: hidden;
     }
-    
-    img {
-      max-width: 100%;
-      display: block;
-    }
-    
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    .container {
-      width: 90%;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    /* Header & Navigation */
-    header {
-      padding: 2rem 0;
-      position: fixed;
+
+    body {
+      font-family: 'Gotham', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--background-dark);
+      color: var(--text-white);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
       width: 100%;
+      max-width: 100vw;
+    }
+
+    .body__inner {
+      min-height: 100vh;
+      position: relative;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+
+    /* Header Styles */
+    .header {
+      position: fixed;
       top: 0;
-      background-color: rgba(255, 255, 255, 0.95);
+      left: 0;
+      right: 0;
       z-index: 1000;
+      background: transparent;
+      padding: 25px 0;
+      transition: all 0.3s ease;
+      width: 100%;
     }
-    
-    .header-inner {
+
+    .header.scrolled {
+      background: #1a1919;
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px 0;
+    }
+
+    .site-padding {
+      padding: 0 15px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .container-fluid {
+      max-width: none;
+      margin: 0;
+      width: 100%;
+      padding: 0;
+    }
+
+    .header .row {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
     }
-    
-    .logo {
-      font-size: 1.2rem;
+
+    .row {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+    }
+
+    .col {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .col-auto {
+      flex: 0 0 auto;
+    }
+
+    .ml-auto {
+      margin-left: auto;
+    }
+
+    .header__logo-container {
+      margin-left: 0;
+    }
+
+    .header__logo {
+      display: inline-block;
+      font-family: 'Gotham', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 500;
+      color: var(--text-white);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      line-height: 1;
+    }
+
+    .header__logo:hover {
+      transform: scale(1.02);
+      color: var(--text-white);
+    }
+
+    .header__logo-main {
+      font-size: 24px;
+      font-weight: 500;
+      display: block;
+      background-color: var(--primary-red);
+      padding: 6px 8px;
+      text-transform: uppercase;
       letter-spacing: 2px;
     }
-    
-    .logo span {
+
+    .header__logo-sub {
+      font-size: 10px;
+      font-weight: 300;
       display: block;
-      font-size: 0.7rem;
-      font-weight: 400;
+      text-transform: uppercase;
       letter-spacing: 1px;
-      color: var(--text-light);
+      margin-top: 2px;
+      opacity: 0.8;
     }
-    
-    nav ul {
+
+    .header__menu-container {
+      margin-right: 0;
+    }
+
+    .header__menu-button {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: var(--text-white);
+      padding: 12px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .header__menu-button:hover {
+      border-color: var(--primary-red);
+      color: var(--primary-red);
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 400px;
+      height: 100vh;
+      background: var(--background-medium);
+      z-index: 2000;
       display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
-    
-    nav a {
-      font-size: 0.9rem;
-      font-weight: 400;
-      letter-spacing: 1px;
-      transition: var(--transition);
-    }
-    
-    nav a:hover {
-      opacity: 0.6;
-    }
-    
-    .menu-toggle {
-      display: none;
       flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 20px;
+      transition: right 0.4s ease;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav.active {
+      right: 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        width: 100%;
+        right: -100%;
+      }
+      
+      .nav.active {
+        right: 0;
+      }
+    }
+
+    .nav__header {
+      padding: 30px;
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__header__close-button {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: var(--text-white);
+      cursor: pointer;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-family: 'Gotham', sans-serif;
+    }
+
+    .nav__header__close-button:hover {
+      border-color: var(--primary-red);
+      color: var(--primary-red);
+    }
+
+    .nav__menu {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 30px;
+    }
+
+    .nav__menu ul {
+      list-style: none;
+    }
+
+    .nav__menu li {
+      margin: 30px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 20px;
+    }
+
+    .nav__menu li:last-child {
+      border-bottom: none;
+    }
+
+    .nav__menu a {
+      color: var(--text-white);
+      text-decoration: none;
+      font-size: 28px;
+      font-weight: 300;
+      font-family: 'Gotham', sans-serif;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .nav__menu a:hover {
+      color: var(--primary-red);
+      padding-left: 10px;
+    }
+
+    .nav__footer {
+      padding: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .nav__contact-item {
+      color: var(--text-gray);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-family: 'Gotham', sans-serif;
+      transition: all 0.3s ease;
       cursor: pointer;
     }
-    
-    .menu-toggle span {
-      width: 100%;
-      height: 2px;
-      background-color: var(--text);
-      transition: var(--transition);
+
+    .nav__contact-item:hover {
+      color: var(--text-white);
     }
-    
+
+    .nav__social {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav__social-link {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-gray);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .nav__social-link:hover {
+      border-color: var(--primary-red);
+      color: var(--primary-red);
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 20px 0;
+      width: 100%;
+    }
+
     /* Hero Section */
     .hero {
       height: 100vh;
       position: relative;
-      display: flex;
-      align-items: center;
-      padding-top: 5rem;
+      overflow: hidden;
+      width: 100%;
     }
-    
-    .hero-image {
+
+    .carousel {
+      height: 100%;
+      position: relative;
+      width: 100%;
+    }
+
+    .carousel__item {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      filter: brightness(0.9);
+      opacity: 0;
+      transition: opacity 1s ease;
     }
-    
-    .hero-content {
-      max-width: 600px;
-      color: var(--white);
-      padding-left: 5%;
+
+    .carousel__item.active {
+      opacity: 1;
     }
-    
-    .hero-title {
-      font-size: 2.5rem;
-      font-weight: 300;
-      letter-spacing: 2px;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-    }
-    
-    .hero-desc {
-      font-size: 1rem;
-      font-weight: 300;
-      margin-bottom: 2rem;
-      max-width: 450px;
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 2.5rem;
-      background-color: transparent;
-      border: 1px solid var(--white);
-      color: var(--white);
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      transition: var(--transition);
-    }
-    
-    .btn:hover {
-      background-color: var(--white);
-      color: var(--text);
-    }
-    
-    /* Projects Section */
-    .section {
-      padding: 8rem 0;
-    }
-    
-    .section-header {
-      margin-bottom: 4rem;
-      max-width: 800px;
-    }
-    
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 300;
-      letter-spacing: 1px;
-      margin-bottom: 1rem;
-    }
-    
-    .section-desc {
-      font-size: 1rem;
-      font-weight: 300;
-      color: var(--text-light);
-    }
-    
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
-    
-    .project-item {
+
+    .gallery-carousel__image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-color: #2a2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 120px;
+      color: var(--text-gray);
       position: relative;
       overflow: hidden;
     }
-    
+
+    .hero__scroll-indicator {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: var(--text-white);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .hero__scroll-indicator__line {
+      width: 1px;
+      height: 60px;
+      background: var(--text-white);
+      margin: 15px auto 0;
+      opacity: 0.6;
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease-out 0.5s forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 1s;
+    }
+
+    .delay-2 {
+      animation-delay: 1.5s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .scrim-bottom::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: linear-gradient(transparent, rgba(10, 10, 10, 0.8));
+      pointer-events: none;
+    }
+
+    /* Content Sections */
+    .content-block {
+      padding: 100px 0;
+      position: relative;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .content-block--first {
+      padding-top: 0;
+    }
+
+    .content-block--last {
+      padding-bottom: 100px;
+    }
+
+    .content-block--collapse-top-margin {
+      padding-top: 60px;
+    }
+
+    .content-block--collapse-bottom-margin {
+      padding-bottom: 60px;
+    }
+
+    .large-text-block__text {
+      font-size: clamp(28px, 5vw, 56px);
+      font-weight: 300;
+      line-height: 1.3;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      font-family: 'Gotham', sans-serif;
+      color: var(--text-white);
+    }
+
+    .h2 {
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 300;
+      color: var(--text-white);
+      margin: 0;
+      font-family: 'Gotham', sans-serif;
+    }
+
+    .text-color-lighter {
+      color: var(--text-white);
+    }
+
+    .label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .arrow-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      padding: 12px 24px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      background: transparent;
+      color: var(--text-white);
+    }
+
+    .arrow-link:hover {
+      color: var(--primary-red);
+      border-color: var(--primary-red);
+    }
+
+    .arrow-link svg {
+      width: 20px;
+      height: 12px;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .arrow-link:hover svg {
+      transform: translateX(5px);
+    }
+
+    /* Featured Projects */
+    .featured-projects__project-row {
+      margin-bottom: 80px;
+      width: 100%;
+    }
+
+    .project-card__large-link {
+      display: block;
+      text-decoration: none;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .project-card__inner {
+      position: relative;
+      max-height: 1000px;
+      min-height: 400px;
+      overflow: hidden;
+      border-radius: 8px;
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tall-portrait-image,
+    .landscape-image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-color: #2a2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 120px;
+      color: var(--text-gray);
+      position: relative;
+    }
+
     .project-image {
       width: 100%;
-      aspect-ratio: 4/3;
+      height: 100%;
       object-fit: cover;
-      transition: var(--transition);
+      object-position: center center;
+      display: block;
     }
-    
-    .project-title {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      padding: 1.5rem;
-      font-size: 1.2rem;
-      font-weight: 300;
+
+    .show-on-portrait {
+      display: block;
+    }
+
+    .show-on-landscape {
+      display: none;
+    }
+
+    @media (orientation: landscape) and (min-width: 768px) {
+      .show-on-portrait {
+        display: none;
+      }
+      .show-on-landscape {
+        display: block;
+      }
+    }
+
+    .h4 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 400;
+      color: var(--text-white);
+      margin: 0;
+      font-family: 'Gotham', sans-serif;
+    }
+
+    .project__categories ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .project-category-list li a {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-size: 10px;
       letter-spacing: 1px;
-      color: var(--white);
-      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: var(--transition);
+      transition: all 0.3s ease;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      background: transparent;
+      white-space: nowrap;
     }
-    
-    .project-item:hover .project-title {
+
+    .project-category-list li a:hover {
+      color: var(--primary-red);
+      border-color: var(--primary-red);
+    }
+
+    .small-label {
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    .fw-bold {
+      font-weight: 500;
+    }
+
+    .text-uppercase {
+      text-transform: uppercase;
+    }
+
+    /* Call to Action */
+    .h4-plus {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 400;
+      line-height: 1.3;
+      font-family: 'Gotham', sans-serif;
+      color: var(--text-white);
+    }
+
+    .fs-italic {
+      font-style: italic;
+    }
+
+    .h5-small {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--text-gray);
+    }
+
+    .text-max-width-large {
+      max-width: 800px;
+    }
+
+    .mt-3 { margin-top: 30px; }
+    .mt-4 { margin-top: 40px; }
+    .mt-5 { margin-top: 50px; }
+    .mb-3 { margin-bottom: 30px; }
+    .mb-4 { margin-bottom: 40px; }
+    .mb-5 { margin-bottom: 50px; }
+    .mt-2 { margin-top: 20px; }
+    .mt-md-3 { margin-top: 30px; }
+    .mb-md-5 { margin-bottom: 50px; }
+
+    /* Footer */
+    .footer {
+      background: var(--background-medium);
+      padding: 50px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .footer__logo {
+      font-family: 'Gotham', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text-white);
+    }
+
+    .fine-print {
+      font-size: 11px;
+      color: var(--text-gray);
+      letter-spacing: 1px;
+    }
+
+    .inline-list {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer__menu ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer__menu a {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .footer__menu a:hover {
+      color: var(--text-white);
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+      }
+
+      .site-padding {
+        padding: 0 15px;
+      }
+
+      .header__logo-main {
+        font-size: clamp(18px, 5vw, 24px);
+        padding: 4px 6px;
+      }
+
+      .header__logo-sub {
+        font-size: clamp(8px, 2.5vw, 10px);
+      }
+
+      .header__menu-button {
+        padding: 10px 18px;
+        font-size: 10px;
+      }
+
+      .nav__header {
+        padding: 25px;
+      }
+      
+      .nav__menu {
+        padding: 50px 25px;
+      }
+      
+      .nav__menu li {
+        margin: 25px 0;
+        padding-bottom: 15px;
+      }
+      
+      .nav__menu a {
+        font-size: clamp(22px, 6vw, 28px);
+      }
+      
+      .nav__footer {
+        padding: 25px;
+      }
+
+      .large-text-block__text {
+        font-size: clamp(22px, 6vw, 40px);
+      }
+
+      .h2 {
+        font-size: clamp(28px, 7vw, 48px);
+      }
+
+      .h4 {
+        font-size: clamp(20px, 5vw, 28px);
+      }
+
+      .project-card__inner {
+        height: 50vh;
+        min-height: 300px;
+      }
+
+      .project__categories ul {
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
+      .project-category-list li a {
+        padding: 5px 10px;
+        font-size: 9px;
+      }
+
+      .inline-list {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .footer__menu ul {
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .arrow-link {
+        padding: 10px 18px;
+        gap: 8px;
+      }
+
+      .h4-plus {
+        font-size: clamp(22px, 5vw, 36px);
+      }
+
+      .h5-small {
+        font-size: 16px;
+      }
+
+      .content-block {
+        padding: 60px 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .d-md-block {
+        display: block;
+      }
+
+      .d-md-none {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .site-padding {
+        padding: 0 12px;
+      }
+
+      .header__logo-main {
+        font-size: 16px;
+        letter-spacing: 1px;
+      }
+
+      .header__logo-sub {
+        font-size: 8px;
+      }
+
+      .arrow-link {
+        padding: 8px 15px;
+        font-size: 9px;
+      }
+
+      .large-text-block__text {
+        font-size: clamp(18px, 5vw, 32px);
+      }
+    }
+
+    /* Scroll Reveal Animations */
+    .scroll-reveal--opacity {
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .scroll-reveal--opacity.visible {
+      opacity: 1;
+    }
+
+    .scroll-reveal--transform {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .scroll-reveal--transform.visible {
       opacity: 1;
       transform: translateY(0);
     }
-    
-    .project-item:hover .project-image {
-      transform: scale(1.05);
-    }
-    
-    /* About Section */
-    .about {
-      background-color: var(--light-gray);
-    }
-    
-    .about-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 4rem;
-      align-items: center;
-    }
-    
-    .about-content {
-      max-width: 500px;
-    }
-    
-    .about-title {
-      font-size: 1.8rem;
-      font-weight: 300;
-      letter-spacing: 1px;
-      margin-bottom: 1.5rem;
-    }
-    
-    .about-text {
-      font-size: 1rem;
-      font-weight: 300;
-      color: var(--text-light);
-      margin-bottom: 2rem;
-      line-height: 1.8;
-    }
-    
-    .about-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: grayscale(100%);
-      transition: var(--transition);
-    }
-    
-    .about-image:hover {
-      filter: grayscale(0%);
-    }
-    
-    /* Gallery Section */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-    
-    .gallery-item {
-      aspect-ratio: 1;
+
+    /* Utility Classes */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
       overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
-    
-    .gallery-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: grayscale(100%);
-      transition: var(--transition);
+
+    .d-flex { display: flex; }
+    .flex-column { flex-direction: column; }
+    .justify-content-center { justify-content: center; }
+    .align-items-center { align-items: center; }
+    .align-items-baseline { align-items: baseline; }
+    .text-center { text-align: center; }
+    .blank-link, .blank-link:hover { color: inherit; text-decoration: none; }
+    .blank-link-hover:hover { color: var(--text-white); }
+    .opacity-link:hover { opacity: 0.7; }
+    .default-styles p { margin-bottom: 1.2em; }
+    .larger-on-mobile { font-size: 16px; }
+    .accent-color { color: var(--text-white); }
+    .h3 { font-size: 32px; font-weight: 300; font-family: 'Gotham', sans-serif; }
+    .h5 { font-size: 20px; font-weight: 400; }
+    .h6 { font-size: 16px; font-weight: 400; }
+    .viewport-height { height: 100vh; }
+    .background-image { background-size: cover; background-position: center; background-repeat: no-repeat; }
+    .position-relative { position: relative; }
+    .d-inline-block { display: inline-block; }
+    .d-inline-flex { display: inline-flex; }
+    .d-block { display: block; }
+
+    .d-none {
+      display: none;
     }
-    
-    .gallery-image:hover {
-      filter: grayscale(0%);
-      transform: scale(1.03);
-    }
-    
-    /* Contact Section */
-    .contact {
-      background-color: var(--white);
-    }
-    
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 4rem;
-    }
-    
-    .contact-info {
-      max-width: 400px;
-    }
-    
-    .contact-title {
-      font-size: 1.8rem;
-      font-weight: 300;
-      letter-spacing: 1px;
-      margin-bottom: 1.5rem;
-    }
-    
-    .contact-text {
-      font-size: 1rem;
-      font-weight: 300;
-      color: var(--text-light);
-      margin-bottom: 2rem;
-      line-height: 1.8;
-    }
-    
-    .contact-details {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    
-    .contact-item i {
-      font-size: 1.2rem;
-      color: var(--text);
-    }
-    
-    .contact-item span {
-      font-size: 0.9rem;
-      color: var(--text-light);
-    }
-    
-    .contact-form {
-      max-width: 500px;
-    }
-    
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    
-    .form-input,
-    .form-textarea {
-      width: 100%;
-      padding: 1rem;
-      font-size: 0.9rem;
-      border: none;
-      background-color: var(--gray);
-      color: var(--text);
-      font-family: inherit;
-    }
-    
-    .form-textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-    
-    .form-input:focus,
-    .form-textarea:focus {
-      outline: none;
-      box-shadow: 0 0 0 1px var(--text);
-    }
-    
-    .form-submit {
-      background-color: var(--text);
-      color: var(--white);
-      border: none;
-      padding: 1rem 2.5rem;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-    
-    .form-submit:hover {
-      opacity: 0.8;
-    }
-    
-    /* Footer */
-    footer {
-      padding: 3rem 0;
-      background-color: var(--light-gray);
-    }
-    
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .footer-logo {
-      font-size: 1.2rem;
-      font-weight: 500;
-      letter-spacing: 2px;
-    }
-    
-    .footer-logo span {
+
+    .d-md-none {
       display: block;
-      font-size: 0.7rem;
-      font-weight: 400;
-      letter-spacing: 1px;
-      color: var(--text-light);
     }
-    
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
+
+    .d-md-block {
+      display: none;
     }
-    
-    .footer-link {
-      font-size: 0.9rem;
-      color: var(--text-light);
-      transition: var(--transition);
-    }
-    
-    .footer-link:hover {
-      color: var(--text);
-    }
-    
-    .social-links {
-      display: flex;
-      gap: 1rem;
-    }
-    
-    .social-link {
-      font-size: 1.2rem;
-      color: var(--text-light);
-      transition: var(--transition);
-    }
-    
-    .social-link:hover {
-      color: var(--text);
-    }
-    
-    .copyright {
-      margin-top: 2rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--text-light);
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 992px) {
-      .projects-grid,
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    @media (min-width: 768px) {
+      .d-md-block {
+        display: block;
       }
-      
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-      
-      .about-content,
-      .contact-info,
-      .contact-form {
-        max-width: 100%;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      nav ul {
+
+      .d-md-none {
         display: none;
-      }
-      
-      .menu-toggle {
-        display: flex;
-      }
-      
-      .hero-title {
-        font-size: 2rem;
-      }
-      
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .footer-content {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-      }
-    }
-    
-    @media (max-width: 576px) {
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .section {
-        padding: 5rem 0;
-      }
-      
-      .section-title,
-      .about-title,
-      .contact-title {
-        font-size: 1.5rem;
       }
     }
   </style>
 </head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="header-inner">
-        <div class="logo">
-          GODWIN
-          <span>RESIDENTIAL CONSTRUCTION</span>
-        </div>
-        <div class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <img src="image.png" alt="Godwin Construction" class="hero-image">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">CRAFTING EXCEPTIONAL LIVING SPACES</h1>
-        <p class="hero-desc">Since 1982, we've been transforming visions into masterfully crafted residential spaces.</p>
-        <a href="#projects" class="btn">View Projects</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-desc">A selection of our recent residential construction projects.</p>
-      </div>
-      <div class="projects-grid">
-        <div class="project-item">
-          <img src="Photos/1.png" alt="Sutton Place" class="project-image">
-          <h3 class="project-title">Sutton Place</h3>
-        </div>
-        <div class="project-item">
-          <img src="Photos/3.png" alt="Lower Fifth Avenue Prewar" class="project-image">
-          <h3 class="project-title">Lower Fifth Avenue Prewar</h3>
-        </div>
-        <div class="project-item">
-          <img src="Photos/5.png" alt="Fifth Avenue Apartment" class="project-image">
-          <h3 class="project-title">Fifth Avenue Apartment</h3>
-        </div>
-        <div class="project-item">
-          <img src="Photos/7.png" alt="Modern Residence" class="project-image">
-          <h3 class="project-title">Modern Residence</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-content">
-          <h2 class="about-title">Our Approach</h2>
-          <p class="about-text">Godwin Residential Construction has completed hundreds of high-end residential projects since our founding in 1982. We have emphasized building a foundation of clear communication yielding remarkable results for our projects.</p>
-          <p class="about-text">Our integrated design-build process ensures a seamless experience from concept to completion. We prioritize sustainable building practices, material longevity, and spaces that enhance daily living.</p>
-          <a href="#contact" class="btn" style="color: var(--text); border-color: var(--text);">Work With Us</a>
-        </div>
-        <div>
-          <img src="Photos/2.png" alt="Our Craftsmanship" class="about-image">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery Section -->
-  <section id="gallery" class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Our Portfolio</h2>
-        <p class="section-desc">A glimpse of our craftsmanship and attention to detail.</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="Photos/6.png" alt="Interior Design" class="gallery-image">
-        </div>
-        <div class="gallery-item">
-          <img src="Photos/8.png" alt="Living Room" class="gallery-image">
-        </div>
-        <div class="gallery-item">
-          <img src="Photos/9.png" alt="Bedroom" class="gallery-image">
-        </div>
-        <div class="gallery-item">
-          <img src="Photos/10.png" alt="Bathroom" class="gallery-image">
-        </div>
-        <div class="gallery-item">
-          <img src="Photos/11.png" alt="Exterior" class="gallery-image">
-        </div>
-        <div class="gallery-item">
-          <img src="Photos/12.png" alt="Home Office" class="gallery-image">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-desc">Interested in working with us? Reach out to discuss your project.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3 class="contact-title">Contact Information</h3>
-          <p class="contact-text">Our team is ready to bring your residential dreams to life. Reach out to schedule a consultation or discuss your project vision.</p>
-          <div class="contact-details">
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>123 Architecture Avenue, Design District</span>
+<body class="home art-gallery page-template-default page page-id-5 wp-theme-ethereal-art page-home" data-page-color="#dc2626" data-body-page-color-class="color-scheme-light">
+  <div id="body__inner" class="body__inner">
+    <header id="header" class="header d-flex flex-column justify-content-center">
+      <div class="site-padding">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col header__logo-container">
+              <a href="https://godwinrc.com/" rel="home">
+                <span class="header__logo position-relative d-inline-block">
+                  <span class="header__logo-main">G O D W I N</span>
+                  <span class="header__logo-sub">RESIDENTIAL CONSTRUCTION</span>
+                </span>
+                <span class="sr-only">Godwin | Residential Construction</span>
+              </a>
             </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <span>(555) 123-4567</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>info@godwinconstruction.com</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-clock"></i>
-              <span>Monday - Friday: 9am - 5pm</span>
+            <div class="col-auto ml-auto header__menu-container">
+              <div id="header__menu-button" class="header__menu-button label blank-link-hover" onclick="toggleMenu()">
+                <div class="d-none d-md-block">MENU</div>
+                <div class="header__menu-button__mobile-icon d-md-none" aria-label="Open navigation menu">⋯</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="contact-form">
-          <form>
-            <div class="form-group">
-              <input type="text" class="form-input" placeholder="Full Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-input" placeholder="Email Address" required>
-            </div>
-            <div class="form-group">
-              <input type="tel" class="form-input" placeholder="Phone Number">
-            </div>
-            <div class="form-group">
-              <textarea class="form-textarea" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="form-submit">Send Message</button>
-          </form>
+      </div>
+    </header>
+    <nav id="nav" class="nav">
+      <div class="nav__header">
+        <div class="nav__header__button-wrapper">
+          <div id="nav__header__close-button" class="nav__header__close-button label blank-link-hover" onclick="toggleMenu()">CLOSE</div>
         </div>
       </div>
-    </div>
-  </section>
+      <div id="nav__menu" class="nav__menu">
+        <div class="menu-main-menu-container">
+          <ul id="menu-main-menu" class="menu">
+            <li class="menu-item"><a href="projects.html">Projects</a></li>
+            <li class="menu-item"><a href="#services">Services</a></li>
+            <li class="menu-item"><a href="#company">Company</a></li>
+            <li class="menu-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav__footer">
+        <div class="nav__contact">
+          <div class="nav__contact-item">INFO@GODWINRC.COM</div>
+          <div class="nav__contact-item">NEW YORK CITY</div>
+        </div>
+        <div class="nav__social">
+          <a href="#" class="nav__social-link">LI</a>
+          <a href="#" class="nav__social-link">IG</a>
+          <a href="#" class="nav__social-link">FB</a>
+        </div>
+      </div>
+    </nav>
+    <main id="application-wrapper" class="application-wrapper">
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          GODWIN
-          <span>RESIDENTIAL CONSTRUCTION</span>
+<section>
+<div class="hero scrim-bottom">
+
+  <div class="show-on-portrait">
+      <div class="carousel gallery-carousel slide-left" data-autoplay-duration="6000">
+        <div class="carousel__item active viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/selected projects/923 fifth ave/15- 923 FIFTH AVE (2).jpg');"></div>
         </div>
-        <div class="footer-links">
-          <a href="#home" class="footer-link">Home</a>
-          <a href="#projects" class="footer-link">Projects</a>
-          <a href="#about" class="footer-link">About</a>
-          <a href="#gallery" class="footer-link">Gallery</a>
-          <a href="#contact" class="footer-link">Contact</a>
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/E56 FAMILY RM.jpg');"></div>
         </div>
-        <div class="social-links">
-          <a href="https://www.instagram.com" target="_blank" class="social-link">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.facebook.com" target="_blank" class="social-link">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.linkedin.com" target="_blank" class="social-link">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.twitter.com" target="_blank" class="social-link">
-            <i class="fab fa-twitter"></i>
-          </a>
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/12- CENTRAL PRK WEST - TREPPER NYC (10).jpg');"></div>
         </div>
-      </div>
-      <div class="copyright">
-        &copy; 2025 Godwin Residential Construction. All rights reserved.
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/mobile/11- fifth ave pied-a-terre.jpg');"></div>
+        </div>
       </div>
     </div>
-  </footer>
+
+    <div class="show-on-landscape">
+      <div class="carousel gallery-carousel slide-left" data-autoplay-duration="6000">
+        <div class="carousel__item active viewport-height" data-caption="">
+           <div class="gallery-carousel__image background-image" style="background-image: url('Photos/selected projects/923 fifth ave/15- 923 FIFTH AVE.jpg');"></div>
+        </div>
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/E56 FAMILY RM.jpg');"></div>
+        </div>
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/13- FIFTH AVENUE APT - CHAPMAN.jpg');"></div>
+        </div>
+        <div class="carousel__item viewport-height" data-caption="">
+          <div class="gallery-carousel__image background-image" style="background-image: url('Photos/chosen ones/XE1D1837.jpg');"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll-indicator small-label text-center d-flex flex-column align-items-center">
+      <span class="fade-in delay-1">
+     
+      </span>
+      <div class="hero__scroll-indicator__line animate-down-repeat delay-2"></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-block content-block--large_text_block content-block--collapse-top-margin">
+<div class="site-padding">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="scroll-reveal--transform">
+          <div class="large-text-block__text default-styles h3-plus">
+            <p><strong>Godwin Residential Construction</strong> is a premier construction firm specializing in Custom Homes, Major Renovations, and exceptional residential projects based in New York City.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="content-block content-block--featured_projects">
+<div class="site-padding">
+  <div class="container-fluid">
+    <div class="row align-items-baseline">
+      <div class="col">
+        <h2 class="h2 scroll-reveal--opacity">
+          Selected Projects
+        </h2>
+      </div>
+      <div class="col-auto scroll-reveal--opacity">
+        <div class="d-none d-md-block">
+          <a href="projects.html" class="label text-uppercase arrow-link d-inline-flex align-items-center text-color-lighter">
+            <span class="arrow-link__label">View Portfolio</span>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.2 13.4" style="enable-background:new 0 0 20.2 13.4;" xml:space="preserve">
+<path fill="#F8F9FA" class="st0-arrow-right" d="M19.5,6.7L19.9,7l0.4-0.4l-0.4-0.4L19.5,6.7z M0.5,6.2C0.2,6.2,0,6.4,0,6.7C0,7,0.2,7.2,0.5,7.2V6.2z M13.5,13.4L19.9,7l-0.7-0.7l-6.3,6.3L13.5,13.4z M19.9,6.3L13.5,0l-0.7,0.7L19.1,7L19.9,6.3z M19.5,6.2h-19v1h19V6.2z"/>
+</svg>
+          </a>
+        </div>
+        <div class="d-md-none">
+          <a href="projects.html" class="label text-uppercase arrow-link d-inline-flex align-items-center text-color-lighter">
+            View All
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2 mt-md-3 mb-4 mb-md-5">
+      <div class="col scroll-reveal--opacity">
+        <hr class="sr-animate-right animate-slow">
+      </div>
+    </div>
+
+    <div class="featured-projects__project-row row">
+      <div class="col">
+        <a href="works/Murrayhillpenthouse.html" class="project-card__large-link blank-link d-block scroll-reveal--opacity">
+          <div class="project-card__inner">
+            <div class="tall-portrait-image show-on-portrait">
+              <img src="Photos/selected projects/Lutken Residence/Godwin Contractor Luken Residence 5.jpg" alt="Modern Estate Renovation" class="project-image">
+            </div>
+            <div class="landscape-image show-on-landscape">
+              <img src="Photos/selected projects/Lutken Residence/Godwin Contractor Luken Residence 5.jpg" alt="Modern Estate Renovation" class="project-image">
+            </div>
+          </div>
+        </a>
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="h4">
+              <p href="#" class="blank-link-hover scroll-reveal--opacity">
+                Murry Hill Penthouse
+              </p>
+            </h3>
+          </div>
+          <div class="col-auto d-none d-md-block">
+            <div class="project__categories">
+              <ul class="project-category-list text-uppercase small-label fw-bold text-color-lighter">
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Apartment</a>
+                </li>
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Custom Build</a>
+                </li>
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Luxury</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-projects__project-row row">
+      <div class="col">
+        <a href="works/Fifth Avenue Apartment.html" class="project-card__large-link blank-link d-block scroll-reveal--opacity">
+          <div class="project-card__inner">
+            <div class="tall-portrait-image show-on-portrait">
+              <img src="Photos\selected projects\Chapman\Picture 005.jpg" alt="Custom Family Home" class="project-image">
+            </div>
+            <div class="landscape-image show-on-landscape">
+              <img src="Photos\selected projects\Chapman\Picture 005.jpg" alt="Custom Family Home" class="project-image">
+            </div>
+          </div>
+        </a>
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="h4">
+              <p href="#" class="blank-link-hover scroll-reveal--opacity">
+                Fifth Avenue Apartment
+              </p>
+            </h3>
+          </div>
+          <div class="col-auto d-none d-md-block">
+            <div class="project__categories">
+              <ul class="project-category-list text-uppercase small-label fw-bold text-color-lighter">
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Apartment</a>
+                </li>
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Luxury</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-projects__project-row row">
+      <div class="col">
+        <a href="works/Manhattan Law Office.html" class="project-card__large-link blank-link d-block scroll-reveal--opacity">
+          <div class="project-card__inner">
+            <div class="tall-portrait-image show-on-portrait">
+              <img src="Photos/selected projects/Schumer Office/Picture 001.jpg" alt="Historic Townhouse Restoration" class="project-image">
+            </div>
+            <div class="landscape-image show-on-landscape">
+              <img src="Photos/selected projects/Schumer Office/Picture 001.jpg" alt="Historic Townhouse Restoration" class="project-image">
+            </div>
+          </div>
+        </a>
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="h4">
+              <p href="#" class="blank-link-hover scroll-reveal--opacity">
+                Manhattan Law Office
+              </p>
+            </h3>
+          </div>
+          <div class="col-auto d-none d-md-block">
+            <div class="project__categories">
+              <ul class="project-category-list text-uppercase small-label fw-bold text-color-lighter">
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Office</a>
+                </li>
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Luxury</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-projects__project-row row">
+      <div class="col">
+        <a href="works/Sutton Place, Pied-à-terre.html" class="project-card__large-link blank-link d-block scroll-reveal--opacity">
+          <div class="project-card__inner">
+            <div class="tall-portrait-image show-on-portrait">
+              <img src="Photos/selected projects/Burkhart/Picture 002.jpg" alt="Luxury Penthouse Build" class="project-image">
+            </div>
+            <div class="landscape-image show-on-landscape">
+              <img src="Photos/selected projects/Burkhart/Picture 002.jpg" alt="Luxury Penthouse Build" class="project-image">
+            </div>
+          </div>
+        </a>
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="h4">
+              <p href="#" class="blank-link-hover scroll-reveal--opacity">
+                Sutton Place, Pied-à-terre
+              </p>
+            </h3>
+          </div>
+          <div class="col-auto d-none d-md-block">
+            <div class="project__categories">
+              <ul class="project-category-list text-uppercase small-label fw-bold text-color-lighter">
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Apartment</a>
+                </li>
+                <li class="d-inline-flex align-items-center scroll-reveal--opacity">
+                  <a href="#" class="blank-link-hover">Luxury</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="content-block content-block--title_block content-block--collapse-bottom-margin">
+<div class="site-padding">
+  <div class="container-fluid">
+    <div class="row align-items-baseline">
+      <div class="col">
+        <h2 class="h2 scroll-reveal--opacity">
+          Start Your Project
+        </h2>
+      </div>
+    </div>
+    <div class="row mt-2 mt-md-3 mb-4 mb-md-5">
+      <div class="col scroll-reveal--opacity">
+        <hr class="sr-animate-right animate-slow">
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="content-block content-block--last content-block--call_to_action_text_block">
+<div class="site-padding">
+  <div class="container-fluid">
+    <div class="row scroll-reveal--transform">
+      <div class="col h4-plus default-styles fs-italic">
+        <div class="text-max-width-large">
+          Every project starts with understanding your vision.
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3 mt-md-4">
+      <div class="col h5-small default-styles scroll-reveal--transform">
+        <div class="text-max-width-large">
+          <p>At Godwin Residential Construction, we transform visions into masterfully crafted homes that reflect your lifestyle and aspirations. Our commitment to quality and detail ensures spaces that endure and inspire.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4 mt-md-5">
+      <div class="col scroll-reveal--transform">
+        <a href="mailto:INFO@GODWINRC.COM" class="label text-uppercase arrow-link d-inline-flex align-items-center text-color-lighter">
+          <span class="arrow-link__label">Email Us</span>
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.2 13.4" style="enable-background:new 0 0 20.2 13.4;" xml:space="preserve">
+<path fill="#F8F9FA" class="st0-arrow-right" d="M19.5,6.7L19.9,7l0.4-0.4l-0.4-0.4L19.5,6.7z M0.5,6.2C0.2,6.2,0,6.4,0,6.7C0,7,0.2,7.2,0.5,7.2V6.2z M13.5,13.4L19.9,7l-0.7-0.7l-6.3,6.3L13.5,13.4z M19.9,6.3L13.5,0l-0.7,0.7L19.1,7L19.9,6.3z M19.5,6.2h-19v1h19V6.2z"/>
+</svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+    </main>
+    <footer id="footer" class="footer" data-page-color-class="color-scheme-dark">
+      <div class="site-padding">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col d-flex align-items-center">
+              <a href="https://godwinrc.com/" rel="home" class="blank-link">
+                <div class="footer__logo footer__logo--desktop d-none d-md-inline-block">
+                  GODWIN RESIDENTIAL CONSTRUCTION
+                </div>
+              </a>
+              <div class="d-md-none fine-print">© 2025 GODWIN RESIDENTIAL CONSTRUCTION</div>
+            </div>
+            <div class="col-auto fine-print">
+              <ul class="inline-list text-uppercase align-items-center justify-content-center justify-content-md-left">
+                <li class="d-none d-md-inline-block">© 2025 GODWIN RESIDENTIAL CONSTRUCTION</li>
+                <div id="footer__menu" class="footer__menu">
+                  <div class="menu-footer-menu-container">
+                    <ul id="menu-footer-menu" class="menu">
+                      <li class="menu-item"><a href="#">Terms of Use</a></li>
+                      <li class="menu-item"><a href="#">Privacy Policy</a></li>
+                      <li class="menu-item"><a href="#">Accessibility</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    // Simplified Carousel System
+    class SimpleCarousel {
+      constructor(container) {
+        this.container = container;
+        this.slides = container.querySelectorAll('.carousel__item');
+        this.currentSlide = 0;
+        this.autoplayInterval = null;
+        this.autoplayDuration = parseInt(container.dataset.autoplayDuration) || 8000;
+        
+        if (this.slides.length > 1) {
+          this.init();
+        }
+      }
+      
+      init() {
+        this.setupInitialState();
+        this.startAutoplay();
+      }
+      
+      setupInitialState() {
+        this.slides.forEach((slide, index) => {
+          slide.classList.remove('active');
+          if (index === 0) {
+            slide.classList.add('active');
+          }
+        });
+      }
+      
+      nextSlide() {
+        this.slides[this.currentSlide].classList.remove('active');
+        this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+        this.slides[this.currentSlide].classList.add('active');
+      }
+      
+      startAutoplay() {
+        this.stopAutoplay();
+        this.autoplayInterval = setInterval(() => {
+          this.nextSlide();
+        }, this.autoplayDuration);
+      }
+      
+      stopAutoplay() {
+        if (this.autoplayInterval) {
+          clearInterval(this.autoplayInterval);
+          this.autoplayInterval = null;
+        }
+      }
+    }
+
+    // Initialize Carousels
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.carousel').forEach(carousel => {
+        new SimpleCarousel(carousel);
+      });
+    });
+
+    // Header scroll effect
+    function handleHeaderScroll() {
+      const header = document.getElementById('header');
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', handleHeaderScroll);
+
+    // Menu Toggle
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('active');
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+        const nav = document.getElementById('nav');
+        nav.classList.remove('active');
+      });
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal--opacity, .scroll-reveal--transform').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const nav = document.getElementById('nav');
+      const menuButton = document.getElementById('header__menu-button');
+      
+      if (!nav.contains(event.target) && !menuButton.contains(event.target)) {
+        nav.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
