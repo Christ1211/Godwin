@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en" data-home-url="https://godwinrc.com/" data-ajax-url="https://godwinrc.com/wp-admin/admin-ajax.php" data-page-color-class="color-scheme-light">
+<head>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <title>727 Washington | Godwin Residential Construction</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Luxury Fifth Avenue apartment renovation by Godwin Residential Construction. Custom renovation featuring premium finishes and exceptional craftsmanship.">
+  <meta name="keywords" content="Fifth Avenue apartment, luxury renovation, residential construction, New York">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="turbo-cache-control" content="no-cache">
+  
+  <style>
+    @font-face {
+      font-family: 'Gotham';
+      src: url('fonts/GothamBook.otf') format('otf');
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Gotham';
+      src: url('fonts/Gotham-Light.ttf') format('ttf');
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Gotham';
+      src: url('fonts/GothamMedium.otf') format('otf');
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    :root {
+      --primary-red: #dc2626;
+      --text-white: #ffffff;
+      --text-gray: #a1a1aa;
+      --background-dark: #1a1919;
+      --background-medium: #1a1919;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Gotham', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--background-dark);
+      color: var(--text-white);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    .body__inner {
+      min-height: 100vh;
+      position: relative;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+
+    /* Header Styles */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--background-dark);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px 0;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .site-padding {
+      padding: 0 15px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .container-fluid {
+      max-width: none;
+      margin: 0;
+      width: 100%;
+      padding: 0;
+    }
+
+    .header .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+    }
+
+    .col {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .col-auto {
+      flex: 0 0 auto;
+    }
+
+    .ml-auto {
+      margin-left: auto;
+    }
+
+    .header__logo-container {
+      margin-left: 0;
+    }
+
+    .header__logo {
+      display: inline-block;
+      font-family: 'Gotham', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 500;
+      color: var(--text-white);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      line-height: 1;
+    }
+
+    .header__logo:hover {
+      transform: scale(1.02);
+      color: var(--text-white);
+    }
+
+    .header__logo-main {
+      font-size: 24px;
+      font-weight: 500;
+      display: block;
+      background-color: var(--primary-red);
+      padding: 6px 8px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .header__logo-sub {
+      font-size: 10px;
+      font-weight: 300;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px;
+      opacity: 0.8;
+    }
+
+    .header__menu-container {
+      margin-right: 0;
+    }
+
+    .header__menu-button {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: var(--text-white);
+      padding: 12px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .header__menu-button:hover {
+      border-color: var(--primary-red);
+      color: var(--primary-red);
+    }
+
+    /* Main Content */
+    .main-content {
+      padding-top: 100px;
+      width: 100%;
+    }
+
+    .project-header {
+      padding: 60px 0 40px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .project-title {
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 300;
+      color: var(--text-white);
+      margin: 0 0 20px 0;
+      font-family: 'Gotham', sans-serif;
+    }
+
+    .project-subtitle {
+      font-size: clamp(16px, 3vw, 24px);
+      font-weight: 300;
+      color: var(--text-gray);
+      margin-bottom: 30px;
+    }
+
+    .project-categories {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    .project-categories li a {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-size: 10px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      background: transparent;
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .project-categories li a:hover {
+      color: var(--primary-red);
+      border-color: var(--primary-red);
+    }
+
+    /* Photo Gallery */
+    .photo-gallery {
+      padding: 80px 0;
+    }
+
+    .gallery-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .gallery-title {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 300;
+      color: var(--text-white);
+      font-family: 'Gotham', sans-serif;
+    }
+
+    .gallery-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-button {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: var(--text-white);
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-family: 'Gotham', sans-serif;
+    }
+
+    .gallery-button:hover,
+    .gallery-button.active {
+      border-color: var(--primary-red);
+      color: var(--primary-red);
+    }
+
+    /* Dynamic Photo Grid */
+    .photo-grid {
+      display: grid;
+      gap: 25px;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      margin-bottom: 40px;
+      transition: all 0.5s ease;
+    }
+
+    .photo-grid.masonry {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      align-items: start;
+    }
+
+    .photo-grid.featured {
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .photo-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: var(--background-medium);
+      min-height: 300px;
+    }
+
+    .photo-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .photo-item.featured {
+      grid-row: 1 / -1;
+      min-height: 600px;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+
+    /* Landscape images */
+    .photo-item.landscape {
+      min-height: 350px;
+    }
+
+    .photo-item.landscape img {
+      aspect-ratio: 16/9;
+      min-height: 350px;
+    }
+
+    /* Portrait images */
+    .photo-item.portrait {
+      min-height: 500px;
+    }
+
+    .photo-item.portrait img {
+      aspect-ratio: 3/4;
+      min-height: 500px;
+    }
+
+    /* Square images */
+    .photo-item.square {
+      min-height: 400px;
+    }
+
+    .photo-item.square img {
+      aspect-ratio: 1/1;
+      min-height: 400px;
+    }
+
+    /* Featured layout specific sizing */
+    .photo-grid.featured .photo-item.featured {
+      min-height: 600px;
+    }
+
+    .photo-grid.featured .photo-item.featured img {
+      min-height: 600px;
+      aspect-ratio: 3/4;
+    }
+
+    .photo-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .photo-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      color: white;
+      padding: 20px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .photo-item:hover .photo-overlay {
+      transform: translateY(0);
+    }
+
+    .photo-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .photo-description {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    /* Project Details */
+    .project-details {
+      padding: 80px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .detail-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .detail-card h3 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: var(--text-white);
+    }
+
+    .detail-list {
+      list-style: none;
+    }
+
+    .detail-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 14px;
+    }
+
+    .detail-list li:last-child {
+      border-bottom: none;
+    }
+
+    .detail-list .label {
+      color: var(--text-gray);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .detail-list .value {
+      color: var(--text-white);
+      font-weight: 400;
+    }
+
+    /* Enhanced Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 2000;
+      backdrop-filter: blur(20px);
+      padding: 20px;
+    }
+
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal img {
+      max-width: calc(100vw - 40px);
+      max-height: calc(100vh - 40px);
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.7);
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 2001;
+    }
+
+    .modal-close:hover {
+      background: rgba(220, 38, 38, 0.8);
+      transform: scale(1.1);
+    }
+
+    /* Modal navigation arrows */
+    .modal-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 15px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      z-index: 2001;
+    }
+
+    .modal-nav:hover {
+      background: rgba(220, 38, 38, 0.8);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .modal-nav.prev {
+      left: 20px;
+    }
+
+    .modal-nav.next {
+      right: 20px;
+    }
+
+    /* Image counter */
+    .modal-counter {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 500;
+      z-index: 2001;
+      display:none;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--background-medium);
+      padding: 50px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .footer__logo {
+      font-family: 'Gotham', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text-white);
+    }
+
+    .fine-print {
+      font-size: 11px;
+      color: var(--text-gray);
+      letter-spacing: 1px;
+    }
+
+    .inline-list {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer__menu ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer__menu a {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .footer__menu a:hover {
+      color: var(--text-white);
+    }
+
+    /* Responsive image adjustments */
+    @media (max-width: 1200px) {
+      .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        padding-top: 80px;
+      }
+
+      .project-header {
+        padding: 40px 0 30px;
+      }
+
+      .gallery-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .gallery-buttons {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .photo-grid.featured {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .photo-item {
+        min-height: 250px;
+      }
+
+      .photo-item.landscape {
+        min-height: 250px;
+      }
+
+      .photo-item.portrait {
+        min-height: 350px;
+      }
+
+      .photo-item.square {
+        min-height: 300px;
+      }
+
+      .photo-item.featured {
+        min-height: 400px;
+      }
+
+      .photo-item img {
+        min-height: inherit;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .project-categories {
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .inline-list {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .footer__menu ul {
+        gap: 15px;
+        justify-content: center;
+      }
+
+      /* Mobile modal adjustments */
+      .modal {
+        padding: 10px;
+      }
+
+      .modal img {
+        max-width: calc(100vw - 20px);
+        max-height: calc(100vh - 20px);
+      }
+
+      .modal-close {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+
+      .modal-nav {
+        padding: 10px 15px;
+        font-size: 20px;
+      }
+
+      .modal-nav.prev {
+        left: 10px;
+      }
+
+      .modal-nav.next {
+        right: 10px;
+      }
+
+      .modal-counter {
+        bottom: 10px;
+        padding: 8px 16px;
+        font-size: 12px;
+      }
+    }
+
+    /* Utility Classes */
+    .d-flex { display: flex; }
+    .flex-column { flex-direction: column; }
+    .justify-content-center { justify-content: center; }
+    .align-items-center { align-items: center; }
+    .text-center { text-align: center; }
+    .text-uppercase { text-transform: uppercase; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .position-relative { position: relative; }
+    .d-inline-block { display: inline-block; }
+    .d-block { display: block; }
+    .d-none { display: none; }
+    .d-md-none { display: block; }
+    .d-md-block { display: none; }
+
+    @media (min-width: 768px) {
+      .d-md-block { display: block; }
+      .d-md-none { display: none; }
+    }
+  </style>
+</head>
+
+<body class="project-page">
+  <div id="body__inner" class="body__inner">
+    <!-- Header -->
+    <header id="header" class="header d-flex flex-column justify-content-center">
+      <div class="site-padding">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col header__logo-container">
+              <a href="../index.html" rel="home">
+                <span class="header__logo position-relative d-inline-block">
+                  <span class="header__logo-main">G O D W I N</span>
+                  <span class="header__logo-sub">RESIDENTIAL CONSTRUCTION</span>
+                </span>
+                <span class="sr-only">Godwin | Residential Construction</span>
+              </a>
+            </div>
+            <div class="col-auto ml-auto header__menu-container">
+              <div class="header__menu-button" onclick="window.history.back()">
+                <div class="d-none d-md-block">BACK</div>
+                <div class="d-md-none">←</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Project Header -->
+      <section class="project-header">
+        <div class="site-padding">
+          <div class="container-fluid">
+            <h1 class="project-title">727 Washington</h1>
+            <p class="project-subtitle"></p>
+            <ul class="project-categories">
+ 
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Photo Gallery -->
+      <section class="photo-gallery">
+        <div class="site-padding">
+          <div class="container-fluid">
+            <div class="gallery-controls">
+              <h2 class="gallery-title">Project Gallery</h2>
+              <div class="gallery-buttons">
+                <button class="gallery-button active" onclick="changeLayout('grid')">Grid View</button>
+                <button class="gallery-button" onclick="changeLayout('masonry')">Masonry</button>
+                <button class="gallery-button" onclick="changeLayout('featured')">Featured</button>
+                <button class="gallery-button" onclick="shufflePhotos()">Shuffle</button>
+              </div>
+            </div>
+
+            <div class="photo-grid" id="photoGrid">
+              <!-- Photos will be dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="site-padding">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col d-flex align-items-center">
+              <a href="/" class="footer__logo d-none d-md-inline-block">
+                GODWIN RESIDENTIAL CONSTRUCTION
+              </a>
+              <div class="d-md-none fine-print">© 2025 GODWIN RESIDENTIAL CONSTRUCTION</div>
+            </div>
+            <div class="col-auto fine-print">
+              <ul class="inline-list text-uppercase align-items-center justify-content-center justify-content-md-left">
+                <li class="d-none d-md-inline-block">© 2025 GODWIN RESIDENTIAL CONSTRUCTION</li>
+                <div class="footer__menu">
+                  <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Enhanced Modal -->
+  <div id="photoModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <button class="modal-nav prev" onclick="previousImage()">‹</button>
+      <button class="modal-nav next" onclick="nextImage()">›</button>
+      <img id="modalImage" src="" alt="">
+      <div class="modal-counter" id="modalCounter">1 / 4</div>
+    </div>
+  </div>
+
+  <script>
+    // Sample photo data - Add more photos here by simply adding new objects to this array
+    let photos = [
+
+                {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/3-_75A1938.jpg',
+        title: '',
+        description: ''
+      },
+
+
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/5-_75A1941.jpg',
+        title: '',
+        description: ''
+      },
+
+ 
+
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/4-_75A1940.jpg',
+        title: '',
+        description: ''
+      },
+
+
+       
+
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/7-_75A1948-Edit.jpg',
+        title: '',
+        description: ''
+      },
+
+
+
+
+
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/26-_75A1963.jpg',
+        title: '',
+        description: ''
+      },
+
+
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/29-_75A1967.jpg',
+        title: '',
+        description: ''
+      },
+
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/30-_75A1969.jpg',
+        title: '',
+        description: ''
+      },
+
+
+
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/33-_75A1975.jpg',
+        title: '',
+        description: ''
+      },
+
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/34-_75A1976.jpg',
+        title: '',
+        description: ''
+      },
+
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/35-_75A1977.jpg',
+        title: '',
+        description: ''
+      },
+
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/36-_75A1978.jpg',
+        title: '',
+        description: ''
+      },
+
+      {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/38-_75A1982.jpg',
+        title: '',
+        description: ''
+      },
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/39-_75A1985.jpg',
+        title: '',
+        description: ''
+      },
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/40-_75A1986.jpg',
+        title: '',
+        description: ''
+      },
+
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/42-_75A1989.jpg',
+        title: '',
+        description: ''
+      },
+                     {
+        src: '../Photos/selected projects/727 Washington/2023.0921_Richard James/46-_75A1974.jpg',
+        title: '',
+        description: ''
+      },
+       
+    
+      
+      
+      
+      // Add more photos here by copying the format above:
+      // {
+      //   src: 'path/to/your/image.jpg',
+      //   title: 'Photo Title',
+      //   description: 'Photo description'
+      // },
+    ];
+
+    let currentLayout = 'grid';
+    let currentImageIndex = 0;
+
+    // Initialize gallery
+    function initializeGallery() {
+      renderPhotos();
+    }
+
+    // Render photos based on current layout
+    function renderPhotos() {
+      const grid = document.getElementById('photoGrid');
+      grid.innerHTML = '';
+      grid.className = `photo-grid ${currentLayout}`;
+
+      photos.forEach((photo, index) => {
+        const photoItem = document.createElement('div');
+        photoItem.className = `photo-item ${index === 0 && currentLayout === 'featured' ? 'featured' : ''}`;
+        
+        photoItem.innerHTML = `
+          <img src="${photo.src}" alt="${photo.title}" onclick="openModal(${index})">
+          <div class="photo-overlay">
+            <div class="photo-title">${photo.title}</div>
+            <div class="photo-description">${photo.description}</div>
+          </div>
+        `;
+        
+        grid.appendChild(photoItem);
+      });
+    }
+
+    // Change layout
+    function changeLayout(layout) {
+      currentLayout = layout;
+      
+      // Update active button
+      document.querySelectorAll('.gallery-button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      renderPhotos();
+    }
+
+    // Shuffle photos
+    function shufflePhotos() {
+      photos = photos.sort(() => Math.random() - 0.5); 
+      renderPhotos();
+    }
+
+    // Enhanced modal functions 
+    function openModal(index) {
+      currentImageIndex = index;
+      const modal = document.getElementById('photoModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalCounter = document.getElementById('modalCounter');
+      
+      modalImage.src = photos[currentImageIndex].src;
+      modalImage.alt = photos[currentImageIndex].title;
+      modalCounter.textContent = `${currentImageIndex + 1} / ${photos.length}`;
+      
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('photoModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % photos.length;
+      updateModalImage();
+    }
+
+    function previousImage() {
+      currentImageIndex = (currentImageIndex - 1 + photos.length) % photos.length;
+      updateModalImage();
+    }
+
+    function updateModalImage() {
+      const modalImage = document.getElementById('modalImage');
+      const modalCounter = document.getElementById('modalCounter');
+      
+      modalImage.src = photos[currentImageIndex].src;
+      modalImage.alt = photos[currentImageIndex].title;
+      modalCounter.textContent = `${currentImageIndex + 1} / ${photos.length}`;
+    }
+
+    // Event listeners
+    document.getElementById('photoModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (document.getElementById('photoModal').classList.contains('active')) {
+        switch(e.key) {
+          case 'Escape':
+            closeModal();
+            break;
+          case 'ArrowRight':
+            nextImage();
+            break;
+          case 'ArrowLeft':
+            previousImage();
+            break;
+        }
+      }
+    });
+
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeGallery();
+      currentLayout = 'grid';
+      renderPhotos();
+    });
+  </script>
+</body>
+</html>

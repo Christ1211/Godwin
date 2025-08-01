@@ -572,6 +572,7 @@
       font-size: 14px;
       font-weight: 500;
       z-index: 2001;
+      display: none;
     }
 
     /* Footer */
@@ -828,7 +829,7 @@
           <div class="container-fluid">
             <div class="gallery-controls">
               <h2 class="gallery-title">Project Gallery</h2>
-              <div class="gallery-buttons">
+              <div class="gallery-buttons"> 
                 <button class="gallery-button active" onclick="changeLayout('grid')">Grid View</button>
                 <button class="gallery-button" onclick="changeLayout('masonry')">Masonry</button>
                 <button class="gallery-button" onclick="changeLayout('featured')">Featured</button>
@@ -887,11 +888,7 @@
   <script>
     // Sample photo data - Add more photos here by simply adding new objects to this array
     let photos = [
-      {
-        src: '../Photos/selected projects/Schumer Office/Picture 001.jpg',
-        title: 'Bar',
-        description: ''
-      },
+
       {
         src: '../Photos/selected projects/Schumer Office/Picture 002.jpg',
         title: 'Conference Room',
