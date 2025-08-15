@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-home-url="https://godwinrc.com/" data-ajax-url="https://godwinrc.com/wp-admin/admin-ajax.php" data-page-color-class="color-scheme-light">
+<head>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <title>Cho-Park | Godwin Residential Construction</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Luxury Fifth Avenue apartment renovation by Godwin Residential Construction. Custom renovation featuring premium finishes and exceptional craftsmanship.">
+  <meta name="keywords" content="Fifth Avenue apartment, luxury renovation, residential construction, New York">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="turbo-cache-control" content="no-cache">
+  
+ <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="project-page">
+  <div id="body__inner" class="body__inner">
+    <!-- Header -->
+    <header id="header" class="header d-flex flex-column justify-content-center">
+      <div class="site-padding">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col header__logo-container">
+              <a href="../index.html" rel="home">
+                <span class="header__logo position-relative d-inline-block">
+                  <span class="header__logo-main">G O D W I N</span>
+                  <span class="header__logo-sub">RESIDENTIAL CONSTRUCTION</span>
+                </span>
+                <span class="sr-only">Godwin | Residential Construction</span>
+              </a>
+            </div>
+            <div class="col-auto ml-auto header__menu-container">
+              <div class="header__menu-button" onclick="window.history.back()">
+                <div class="d-none d-md-block">BACK</div>
+                <div class="d-md-none">←</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Project Header -->
+      <section class="project-header">
+        <div class="site-padding">
+          <div class="container-fluid">
+            <h1 class="project-title">East 34th Street Pre-war</h1>
+            <p class="project-subtitle">New York</p>
+            <ul class="project-categories">
+             <li><a href="#">John B Murray Architecture</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Photo Gallery -->
+      <section class="photo-gallery">
+        <div class="site-padding">
+          <div class="container-fluid">
+            <div class="gallery-controls">
+              <h2 class="gallery-title">Project Gallery</h2>
+              <div class="gallery-buttons">
+                <button class="gallery-button active" onclick="changeLayout('grid')">Grid View</button>
+                <button class="gallery-button" onclick="changeLayout('masonry')">Masonry</button>
+                <button class="gallery-button" onclick="changeLayout('featured')">Featured</button>
+                <button class="gallery-button" onclick="shufflePhotos()">Shuffle</button>
+              </div>
+            </div>
+
+            <div class="photo-grid" id="photoGrid">
+              <!-- Photos will be dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="site-padding">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col d-flex align-items-center">
+              <a href="/" class="footer__logo d-none d-md-inline-block">
+                GODWIN RESIDENTIAL CONSTRUCTION
+              </a>
+              <div class="d-md-none fine-print">© 2025 GODWIN RESIDENTIAL CONSTRUCTION</div>
+            </div>
+            <div class="col-auto fine-print">
+              <ul class="inline-list text-uppercase align-items-center justify-content-center justify-content-md-left">
+                <li class="d-none d-md-inline-block">© 2025 GODWIN RESIDENTIAL CONSTRUCTION</li>
+                <div class="footer__menu">
+                  <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Enhanced Modal -->
+  <div id="photoModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <button class="modal-nav prev" onclick="previousImage()">‹</button>
+      <button class="modal-nav next" onclick="nextImage()">›</button>
+      <img id="modalImage" src="" alt="">
+      <div class="modal-counter" id="modalCounter">1 / 4</div>
+    </div>
+  </div>
+
+  <script>
+    // Sample photo data - Add more photos here by simply adding new objects to this array
+    let photos = [
+
+
+                    {
+        src: '../Photos/selected projects/Cho-Park/AMB_5460.jpeg',
+        title: '',
+        description: ''
+      },
+
+                    {
+        src: '../Photos/selected projects/Cho-Park/AMB_5563.jpeg',
+        title: '',
+        description: ''
+      },
+
+
+ 
+                    {
+        src: '../Photos/selected projects/Cho-Park/AMB_5598.jpeg',
+        title: '',
+        description: ''
+      },
+
+                    {
+        src: '../Photos/selected projects/Cho-Park/AMB_5609-Edit.jpeg',
+        title: '',
+        description: ''
+      },
+                    {
+        src: '../Photos/selected projects/Cho-Park/AMB_5622.jpeg',
+        title: '',
+        description: ''
+      },
+                    {
+        src: '../Photos/selected projects/Cho-Park/AMB_5642-Edit.jpeg',
+        title: '',
+        description: ''
+      },
+                         {
+        src: '../Photos/selected projects/Cho-Park/AMB_5662.jpeg',
+        title: '',
+        description: ''
+      },
+
+         {
+        src: '../Photos/selected projects/Cho-Park/AMB_5699.jpeg',
+        title: '',
+        description: ''
+      },
+  
+
+
+                   {
+        src: '../Photos/selected projects/Cho-Park/AMB_5749-2.jpeg',
+        title: '',
+        description: ''
+      },
+                   {
+        src: '../Photos/selected projects/Cho-Park/AMB_5758.jpeg',
+        title: '',
+        description: ''
+      },
+                   {
+        src: '../Photos/selected projects/Cho-Park/AMB_5785.jpeg',
+        title: '',
+        description: ''
+      },
+                   {
+        src: '../Photos/selected projects/Cho-Park/AMB_5795.jpeg',
+        title: '',
+        description: ''
+      },
+                   {
+        src: '../Photos/selected projects/Cho-Park/AMB_5810.jpeg',
+        title: '',
+        description: ''
+      },                   {
+        src: '../Photos/selected projects/Cho-Park/AMB_5815.jpeg',
+        title: '',
+        description: ''
+      },                   {
+        src: '../Photos/selected projects/Cho-Park/AMB_5823.jpeg',
+        title: '',
+        description: ''
+      },                   
+      
+                      {
+        src: '../Photos/selected projects/Cho-Park/AMB_5865.jpeg',
+        title: '',
+        description: ''
+      },                   {
+        src: '../Photos/selected projects/Cho-Park/AMB_5888.jpeg',
+        title: '',
+        description: ''
+      },                   
+      {
+        src: '../Photos/selected projects/Cho-Park/AMB_5904.jpeg',
+        title: '',
+        description: ''
+      },                   
+
+
+
+
+
+    
+    
+      
+      
+      
+      // Add more photos here by copying the format above:
+      // {
+      //   src: 'path/to/your/image.jpg',
+      //   title: 'Photo Title',
+      //   description: 'Photo description'
+      // },
+    ];
+
+    let currentLayout = 'grid';
+    let currentImageIndex = 0;
+
+    // Initialize gallery
+    function initializeGallery() {
+      renderPhotos();
+    }
+
+    // Render photos based on current layout
+    function renderPhotos() {
+      const grid = document.getElementById('photoGrid');
+      grid.innerHTML = '';
+      grid.className = `photo-grid ${currentLayout}`;
+
+      photos.forEach((photo, index) => {
+        const photoItem = document.createElement('div');
+        photoItem.className = `photo-item ${index === 0 && currentLayout === 'featured' ? 'featured' : ''}`;
+        
+        photoItem.innerHTML = `
+          <img src="${photo.src}" alt="${photo.title}" onclick="openModal(${index})">
+          <div class="photo-overlay">
+            <div class="photo-title">${photo.title}</div>
+            <div class="photo-description">${photo.description}</div>
+          </div>
+        `;
+        
+        grid.appendChild(photoItem);
+      });
+    }
+
+    // Change layout
+    function changeLayout(layout) {
+      currentLayout = layout;
+      
+      // Update active button
+      document.querySelectorAll('.gallery-button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      renderPhotos();
+    }
+
+    // Shuffle photos
+    function shufflePhotos() {
+      photos = photos.sort(() => Math.random() - 0.5);
+      renderPhotos();
+    }
+
+    // Enhanced modal functions
+    function openModal(index) {
+      currentImageIndex = index;
+      const modal = document.getElementById('photoModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalCounter = document.getElementById('modalCounter');
+      
+      modalImage.src = photos[currentImageIndex].src;
+      modalImage.alt = photos[currentImageIndex].title;
+      modalCounter.textContent = `${currentImageIndex + 1} / ${photos.length}`;
+      
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('photoModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % photos.length;
+      updateModalImage();
+    }
+
+    function previousImage() {
+      currentImageIndex = (currentImageIndex - 1 + photos.length) % photos.length;
+      updateModalImage();
+    }
+
+    function updateModalImage() {
+      const modalImage = document.getElementById('modalImage');
+      const modalCounter = document.getElementById('modalCounter');
+      
+      modalImage.src = photos[currentImageIndex].src;
+      modalImage.alt = photos[currentImageIndex].title;
+      modalCounter.textContent = `${currentImageIndex + 1} / ${photos.length}`;
+    }
+
+    // Event listeners
+    document.getElementById('photoModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (document.getElementById('photoModal').classList.contains('active')) {
+        switch(e.key) {
+          case 'Escape':
+            closeModal();
+            break;
+          case 'ArrowRight':
+            nextImage();
+            break;
+          case 'ArrowLeft':
+            previousImage();
+            break;
+        }
+      }
+    });
+
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeGallery();
+      currentLayout = 'grid';
+      renderPhotos();
+    });
+  </script>
+</body>
+</html>
