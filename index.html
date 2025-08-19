@@ -39,7 +39,11 @@
     <meta name="twitter:title" content="Godwin Residential Construction | Custom Homes & Luxury Renovations NYC">
     <meta name="twitter:description" content="Premier residential construction company in NYC. Custom homes, luxury renovations, and apartment builds in Manhattan. Licensed contractors with 15+ years experience.">
     <meta name="twitter:image" content="https://www.godwininc.com/Photos/selected projects/923 fifth ave/15- 923 FIFTH AVE.jpg">
-
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
@@ -261,7 +265,136 @@
     </div>
   </div>
   </section>
+      <div class="flipbook-header">
+        <h1>GODWIN LOOK BOOK</h1>
+    </div>
+    <main class="flipbook-main-container">
+        <button class="flipbook-nav-btn" id="prevBtn">‹</button>
+        <div id="flipbook">
+            <!-- front cover -->
+            <div class="flipbook-page flipbook-cover"><img src="images/Cover.png"></div>
 
+            <!-- sample pages -->
+            <div class="flipbook-page"><img src="images/page_0001_left.jpg" alt="Page 1"></div>
+            <div class="flipbook-page"><img src="images/page_0001_right.jpg" alt="Page 2"></div>
+            <div class="flipbook-page"><img src="images/page_0002_left.jpg" alt="Page 3"></div>
+            <div class="flipbook-page"><img src="images/page_0002_right.jpg" alt="Page 4"></div>
+            <div class="flipbook-page"><img src="images/page_0003_left.jpg" alt="Page 5"></div>
+            <div class="flipbook-page"><img src="images/page_0003_right.jpg" alt="Page 6"></div>
+            <div class="flipbook-page"><img src="images/page_0004_left.jpg" alt="Page 7"></div>
+            <div class="flipbook-page"><img src="images/page_0004_right.jpg" alt="Page 8"></div>
+            <div class="flipbook-page"><img src="images/page_0005_left.jpg" alt="Page 9"></div>
+            <div class="flipbook-page"><img src="images/page_0005_right.jpg" alt="Page 10"></div>
+            <div class="flipbook-page"><img src="images/page_0006_left.jpg" alt="Page 11"></div>
+            <div class="flipbook-page"><img src="images/page_0006_right.jpg" alt="Page 12"></div>
+            <div class="flipbook-page"><img src="images/page_0007_left.jpg" alt="Page 13"></div>
+            <div class="flipbook-page"><img src="images/page_0007_right.jpg" alt="Page 14"></div>
+            <div class="flipbook-page"><img src="images/page_0008_left.jpg" alt="Page 15"></div>
+            <div class="flipbook-page"><img src="images/page_0008_right.jpg" alt="Page 16"></div>
+            <div class="flipbook-page"><img src="images/page_0009_left.jpg" alt="Page 17"></div>
+            <div class="flipbook-page"><img src="images/page_0009_right.jpg" alt="Page 18"></div>
+            <div class="flipbook-page"><img src="images/page_0010_left.jpg" alt="Page 19"></div>
+            <div class="flipbook-page"><img src="images/page_0010_right.jpg" alt="Page 20"></div>
+            <div class="flipbook-page"><img src="images/page_0011_left.jpg" alt="Page 21"></div>
+            <div class="flipbook-page"><img src="images/page_0011_right.jpg" alt="Page 22"></div>
+            <div class="flipbook-page"><img src="images/page_0012_left.jpg" alt="Page 23"></div>
+            <div class="flipbook-page"><img src="images/page_0012_right.jpg" alt="Page 24"></div>
+            <div class="flipbook-page"><img src="images/page_0013_left.jpg" alt="Page 25"></div>
+            <div class="flipbook-page"><img src="images/page_0013_right.jpg" alt="Page 26"></div>
+            <div class="flipbook-page"><img src="images/page_0014_left.jpg" alt="Page 27"></div>
+            <div class="flipbook-page"><img src="images/page_0014_right.jpg" alt="Page 28"></div>
+            <div class="flipbook-page"><img src="images/page_0015_left.jpg" alt="Page 29"></div>
+            <div class="flipbook-page"><img src="images/page_0015_right.jpg" alt="Page 30"></div>
+            <div class="flipbook-page"><img src="images/page_0016_left.jpg" alt="Page 31"></div>
+            <div class="flipbook-page"><img src="images/page_0016_right.jpg" alt="Page 32"></div>
+            <div class="flipbook-page"><img src="images/page_0017_left.jpg" alt="Page 33"></div>
+            <div class="flipbook-page"><img src="images/page_0017_right.jpg" alt="Page 34"></div>
+            <div class="flipbook-page"><img src="images/page_0018_left.jpg" alt="Page 35"></div>
+            <div class="flipbook-page"><img src="images/page_0018_right.jpg" alt="Page 36"></div>
+            <div class="flipbook-page"><img src="images/page_0019_left.jpg" alt="Page 37"></div>
+            <div class="flipbook-page"><img src="images/page_0019_right.jpg" alt="Page 38"></div>
+            <div class="flipbook-page"><img src="images/page_0020_left.jpg" alt="Page 39"></div>
+            <div class="flipbook-page"><img src="images/page_0020_right.jpg" alt="Page 40"></div>
+            <div class="flipbook-page"><img src="images/page_0021_left.jpg" alt="Page 41"></div>
+            <div class="flipbook-page"><img src="images/page_0021_right.jpg" alt="Page 42"></div>
+            <div class="flipbook-page"><img src="images/page_0022_left.jpg" alt="Page 43"></div>
+            <div class="flipbook-page"><img src="images/page_0022_right.jpg" alt="Page 44"></div>
+            <div class="flipbook-page"><img src="images/page_0023_left.jpg" alt="Page 45"></div>
+            <div class="flipbook-page"><img src="images/page_0023_right.jpg" alt="Page 46"></div>
+            <div class="flipbook-page"><img src="images/page_0024_left.jpg" alt="Page 47"></div>
+            <div class="flipbook-page"><img src="images/page_0024_right.jpg" alt="Page 48"></div>
+            <div class="flipbook-page"><img src="images/page_0025_left.jpg" alt="Page 49"></div>
+            <div class="flipbook-page"><img src="images/page_0025_right.jpg" alt="Page 50"></div>
+            <div class="flipbook-page"><img src="images/page_0026_left.jpg" alt="Page 51"></div>
+            <div class="flipbook-page"><img src="images/page_0026_right.jpg" alt="Page 52"></div>
+            <div class="flipbook-page"><img src="images/page_0027_left.jpg" alt="Page 53"></div>
+            <div class="flipbook-page"><img src="images/page_0027_right.jpg" alt="Page 54"></div>
+            <div class="flipbook-page"><img src="images/page_0028_left.jpg" alt="Page 55"></div>
+            <div class="flipbook-page"><img src="images/page_0028_right.jpg" alt="Page 56"></div>
+            <div class="flipbook-page"><img src="images/page_0029_left.jpg" alt="Page 57"></div>
+            <div class="flipbook-page"><img src="images/page_0029_right.jpg" alt="Page 58"></div>
+            <div class="flipbook-page"><img src="images/page_0030_left.jpg" alt="Page 59"></div>
+            <div class="flipbook-page"><img src="images/page_0030_right.jpg" alt="Page 60"></div>
+            <div class="flipbook-page"><img src="images/page_0031_left.jpg" alt="Page 61"></div>
+            <div class="flipbook-page"><img src="images/page_0031_right.jpg" alt="Page 62"></div>
+            <div class="flipbook-page"><img src="images/page_0032_left.jpg" alt="Page 63"></div>
+            <div class="flipbook-page"><img src="images/page_0032_right.jpg" alt="Page 64"></div>
+            <div class="flipbook-page"><img src="images/page_0033_left.jpg" alt="Page 65"></div>
+            <div class="flipbook-page"><img src="images/page_0033_right.jpg" alt="Page 66"></div>
+            <div class="flipbook-page"><img src="images/page_0034_left.jpg" alt="Page 67"></div>
+            <div class="flipbook-page"><img src="images/page_0034_right.jpg" alt="Page 68"></div>
+            <div class="flipbook-page"><img src="images/page_0035_left.jpg" alt="Page 69"></div>
+            <div class="flipbook-page"><img src="images/page_0035_right.jpg" alt="Page 70"></div>
+            <div class="flipbook-page"><img src="images/page_0036_left.jpg" alt="Page 71"></div>
+            <div class="flipbook-page"><img src="images/page_0036_right.jpg" alt="Page 72"></div>
+            <div class="flipbook-page"><img src="images/page_0037_left.jpg" alt="Page 73"></div>
+            <div class="flipbook-page"><img src="images/page_0037_right.jpg" alt="Page 74"></div>
+            <div class="flipbook-page"><img src="images/page_0038_left.jpg" alt="Page 75"></div>
+            <div class="flipbook-page"><img src="images/page_0038_right.jpg" alt="Page 76"></div>
+
+            <!-- back cover -->
+            <div class="flipbook-page flipbook-cover">The End</div>
+        </div>
+        <button class="flipbook-nav-btn" id="nextBtn">›</button>
+    </main>
+
+    <script>
+        let flipbook = null;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const imgs = Array.from(document.querySelectorAll('#flipbook img'));
+            const promises = imgs.map(img => new Promise(res => {
+                if (img.complete) res();
+                else img.onload = img.onerror = res;
+            }));
+
+            Promise.all(promises).then(() => {
+                initFlipbook();
+                document.getElementById('loadingOverlay').style.display = 'none';
+            });
+        });
+
+        function initFlipbook() {
+            flipbook = $("#flipbook");
+            flipbook.turn({
+                width: 1000,
+                height: 700,
+                autoCenter: true,
+                display: 'double',
+                duration: 1200,
+                gradients: true,
+                elevation: 100
+            });
+
+            document.getElementById('prevBtn').onclick = () => flipbook.turn('previous');
+            document.getElementById('nextBtn').onclick = () => flipbook.turn('next');
+
+            document.addEventListener('keydown', e => {
+                if (e.key === 'ArrowLeft') flipbook.turn('previous');
+                if (e.key === 'ArrowRight' || e.key === ' ') flipbook.turn('next');
+            });
+        }
+    </script>
   <!-- SEO: Added Services Section for better keyword targeting --> 
   <section id="services" class="content-block">
   <div class="site-padding">
