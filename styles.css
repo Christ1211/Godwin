@@ -728,22 +728,51 @@ hr {
   display: block;
 }
 
-.show-on-portrait {
-  display: block;
-}
-
-.show-on-landscape {
-  display: none;
-}
-
-@media (orientation: landscape) and (min-width: 768px) {
-  .show-on-portrait {
-    display: none;
-  }
-  .show-on-landscape {
-    display: block;
-  }
-}
+       .show-on-portrait, .show-on-landscape {
+            display: block;
+        }
+        
+        @media (orientation: landscape) {
+            .show-on-portrait { display: none; }
+        }
+        
+        @media (orientation: portrait) {
+            .show-on-landscape { display: none; }
+        }       
+        .carousel__item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            pointer-events: none;
+        }
+        
+        .carousel__item.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .carousel-link {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+        
+        .gallery-carousel__image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .viewport-height {
+            height: 400px;
+        }
 
 .project__categories ul {
   list-style: none;
