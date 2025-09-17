@@ -319,7 +319,7 @@ body {
 .nav__social-link {
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+ 
   border-radius: 4px;
   display: flex;
   align-items: center;
