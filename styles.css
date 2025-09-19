@@ -1722,18 +1722,22 @@ hr {
 
 
         
-        .flipbook-header {
-            color: #cccaca;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .flipbook-header h1 {
-            font-size: 18px;
-            font-weight: 600;
-            margin: 0;
-        }
+.flipbook-header {
+  color: #cccaca;
+  padding: clamp(10px, 2vw, 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flipbook-header h2 {
+  font-size: clamp(16px, 3vw, 24px);
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: clamp(1px, 0.3vw, 2px);
+}
+
 
         .flipbook-main-container {
             display: flex;
