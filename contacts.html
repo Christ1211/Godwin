@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client & Business Partner Messages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            font-weight: 600;
+        }
+
+        .message-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .message-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .priority-high {
+            border-left: 5px solid #e74c3c;
+        }
+
+        .priority-medium {
+            border-left: 5px solid #f39c12;
+        }
+
+        .priority-partnership {
+            border-left: 5px solid #27ae60;
+        }
+
+        .priority-misc {
+            border-left: 5px solid #9b59b6;
+        }
+
+        .message-header {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .contact-subject {
+            color: #7f8c8d;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .contact-email {
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .contact-date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            text-align: right;
+        }
+
+        .message-body {
+            padding: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .comment-section {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .comment-input {
+            width: 100%;
+            min-height: 80px;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            resize: vertical;
+            transition: border-color 0.2s;
+        }
+
+        .comment-input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .comment-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .priority-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+
+        .badge-high {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .badge-medium {
+            background: #f39c12;
+            color: white;
+        }
+
+        .badge-partnership {
+            background: #27ae60;
+            color: white;
+        }
+
+        .badge-misc {
+            background: #9b59b6;
+            color: white;
+        }
+
+        .badge-admin {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3498db;
+        }
+
+        .stat-label {
+            color: #7f8c8d;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+            }
+            
+            .contact-date {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Client & Business Partner Messages</h1>
+            <p class="subtitle">Manage your prospects and partnerships efficiently</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">High Priority</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Active Inquiries</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Partnerships</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">21</div>
+                <div class="stat-label">Total Messages</div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">High Priority Prospects</h2>
+            
+            <div class="message-card priority-high">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Ivy Rose <span class="priority-badge badge-high">High Priority</span></div>
+                            <div class="contact-subject">Subject: Renovation</div>
+                            <div class="contact-email">Roseivy1015@gmail.com</div>
+                        </div>
+                        <div class="contact-date">Nov 25, 2024 - 10:15 PM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    I hope this message finds you well. I am interested in undertaking a full renovation of my apartment and was referred to your company by a friend. I was thoroughly impressed by the work you did on their project and believe your expertise would be a great fit for my vision.<br><br>
+
+                    Please let me know the best way to proceed, and feel free to reach out to me via email at Roseivy1015@gmail.com. I look forward to hearing from you and discussing my project further.<br><br>
+
+                    <strong>Address:</strong> 277 5th Ave #PENT, New York, NY 10016<br>
+                    <strong>Size:</strong> 4,520 sq ft.<br>
+                    <strong>Budget:</strong> above $1m<br>
+                    <strong>Current project status:</strong> Ready to hire<br>
+                    <strong>Start date:</strong> As soon as possible.
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this prospect..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-high">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Jason Vautour <span class="priority-badge badge-high">High Priority</span></div>
+                            <div class="contact-subject">Subject: INQUIRY</div>
+                            <div class="contact-email">jvautour@bowermanconstructoin.com</div>
+                        </div>
+                        <div class="contact-date">Jul 22, 2024 - 6:01 PM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    I'm looking to hire a top-tier professional for a new project. I am committed to achieving the highest quality and am open to investing accordingly. I look forward to discussing how we can make my vision a reality. Please feel free to text me at the email provided. I look forward to hearing from you.
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this prospect..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Active Project Inquiries</h2>
+            
+            <div class="message-card priority-medium">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Margaret Jackson <span class="priority-badge badge-medium">Active Inquiry</span></div>
+                            <div class="contact-subject">Subject: Available for hire?</div>
+                            <div class="contact-email">margaret@grasshopperlandscapings.com</div>
+                        </div>
+                        <div class="contact-date">Jul 31, 2024 - 8:37 PM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hello,<br>
+                    I have a retail Construction project that we would like discuss with your company. Please let us know if you are interested so we can share the Job summary, Project timeline, proposed project budget and the Structural drawing.<br><br>
+
+                    Thank you and looking forward to hearing from you!<br><br>
+
+                    Margaret.
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this prospect..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-medium">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">AL Drechsel <span class="priority-badge badge-medium">Active Inquiry</span></div>
+                            <div class="contact-subject">Subject: Inquiry</div>
+                            <div class="contact-email">adrechsel@tilghmanbuilder.com</div>
+                        </div>
+                        <div class="contact-date">Jul 26, 2024 - 10:36 PM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hello. I'm reaching out to inquire about your construction services. I have an upcoming project and would like to know more about your availability, pricing, and project timelines.
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this prospect..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-medium">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Brian Jennings <span class="priority-badge badge-medium">Active Inquiry</span></div>
+                            <div class="contact-subject">Subject: Project Bid Opportunity Inquiry</div>
+                            <div class="contact-email">bjennings@etlhanol.com</div>
+                        </div>
+                        <div class="contact-date">Apr 28, 2024 - 6:00 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    My name is Brian Jennings, and I am the Chief Executive Officer at Ethanol LLC. We are currently exploring potential partnership for your service on a project, and I would like to inquire about the services you offer in this area.<br><br>
+
+                    Could you kindly provide more information about your offerings, pricing structure, and any case studies or references that might help us better understand how you could support our needs?<br><br>
+
+                    Looking forward to your response.
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this prospect..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Business Partnership Opportunities</h2>
+            
+            <div class="message-card priority-partnership">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Ion Filimon <span class="priority-badge badge-partnership">Partnership</span></div>
+                            <div class="contact-subject">Subject: Professional 3D Rendering</div>
+                            <div class="contact-email">ion.realityforge@gmail.com</div>
+                        </div>
+                        <div class="contact-date">Aug 13, 2024 - 7:29 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hello Godwin Inc.,<br>
+                    I'm Ion from Reality Forge, I do 3D visualizations for architecture and design projects.<br>
+                    Just reaching out because I thought our work might be a good fit for what you do.<br>
+                    We create photorealistic renders that help you (and your clients) see the final result before the build even starts.<br>
+                    It's great for planning and even better for winning over clients.<br>
+                    If you're curious, feel free to check out some of our work at www.realityforge3d.com.<br>
+                    I'd be happy to connect and see if there's anything coming up where we could help.<br>
+                    Cheers,<br>
+                    Ion Filimon<br>
+                    www.realityforge3d.com
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this partnership opportunity..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-partnership">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Andrew Dobbing <span class="priority-badge badge-partnership">Partnership</span></div>
+                            <div class="contact-subject">Subject: NATUZZI ITALIA - FURNITURE</div>
+                            <div class="contact-email">adobbing@natuzzi.com</div>
+                        </div>
+                        <div class="contact-date">Apr 14, 2024 - 2:19 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hello,<br>
+                    I walked past one of your projects in the West Village the other day and want to get in touch, to see if we might collaborate with you and your clients on furnishing their home.
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this partnership opportunity..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-partnership">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Donovan Andino <span class="priority-badge badge-partnership">Partnership</span></div>
+                            <div class="contact-subject">Subject: Virtual Tour Preview</div>
+                            <div class="contact-email">donovan.andino@gmail.com</div>
+                        </div>
+                        <div class="contact-date">May 4, 2024 - 12:13 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Good afternoon,<br><br>
+
+                    I want to follow up on the virtual tour preview I sent earlier and see if you had a chance to take a look.<br><br>
+
+                    To give a bit more context, I create customizable first-person virtual tours for interiors and exteriors, designed to showcase remodeling ideas and transformations in a way that engages potential leads and drives conversions.<br><br>
+
+                    Unlike traditional 3D renderings that require photos to get started, my process doesn't rely on any existing images. That way, if your potential leads don't have anything prepared, they can still experience a variety of design options and envision how different styles could work in their space within minutes.<br><br>
+
+                    Here are the links, just in case you didn't receive them<br><br>
+
+                    Google Drive: https://drive.google.com/file/d/1LdZvSe4FqlLXfetcalD0QKoBBoMKNpCM/view?usp=sharing<br><br>
+
+                    SwissTransfer (backup download): https://www.swisstransfer.com/d/17eb79cb-a530-4c42-9ed0-ca21bebb848d<br><br>
+
+                    Let me know if you'd like more details. I'd love to hear your thoughts.<br><br>
+
+                    Thank you,<br>
+                    Donovan Andino
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this partnership opportunity..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Miscellaneous</h2>
+            
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Michael Hubbard <span class="priority-badge badge-misc">Marketing</span></div>
+                            <div class="contact-subject">Subject: Website Marketing</div>
+                            <div class="contact-email">michael.hubbard@leadcms.net</div>
+                        </div>
+                        <div class="contact-date">May 23, 2024 - 12:44 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hi Steve,<br><br>
+
+                    I'm Michael, and I've helped 600+ Wix businesses get more customers from Google (verified by Wix).<br><br>
+
+                    Your focus on high-end residential construction really sets you apart.<br><br>
+
+                    Your site should be getting more visitors, and I have a simple plan to fix that.<br><br>
+
+                    Would you like a free site audit?<br><br>
+
+                    Michael Hubbard<br>
+                    Verified Wix Partner
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Max Burns <span class="priority-badge badge-misc">Follow-up</span></div>
+                            <div class="contact-subject">Subject: Follow-up</div>
+                            <div class="contact-email">max.burns@purecms.net</div>
+                        </div>
+                        <div class="contact-date">Apr 19, 2024 - 9:33 PM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hey Steve,<br><br>
+
+                    Please get back to me.<br><br>
+
+                    Max
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Mike Jacobson <span class="priority-badge badge-misc">Estimation</span></div>
+                            <div class="contact-subject">Subject: Construction Estimates</div>
+                            <div class="contact-email">estimationwisellc@yahoo.com</div>
+                        </div>
+                        <div class="contact-date">Apr 18, 2024 - 10:56 PM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    We handle construction estimates and material takeoffs—covering sub-trades like insulation and piping too. Not using us? You're watching wins disappear. Our expertise can stop that.<br><br>
+
+                    Hit reply with your plans—let's fix it.
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Sam Stevens <span class="priority-badge badge-misc">Estimation</span></div>
+                            <div class="contact-subject">Subject: Estimation Services</div>
+                            <div class="contact-email">samestimator3@gmail.com</div>
+                        </div>
+                        <div class="contact-date">Mar 22, 2024 - 4:48 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    We are an estimation company who creates cost estimates and material quantities takeoffs for construction projects.<br>
+                    Do you have any project of estimation for us? If yes, just send over the plans so we can give you a quote on that. Let me know if you have any questions. Thanks.
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Matthew Liam <span class="priority-badge badge-misc">Estimation</span></div>
+                            <div class="contact-subject">Subject: Let's Build Something Amazing Together</div>
+                            <div class="contact-email">uhsestimation1@gmail.com</div>
+                        </div>
+                        <div class="contact-date">Mar 18, 2024 - 4:41 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    I hope you're well! UHS Estimation provides accurate, tailored takeoffs that save time and ensure smooth project execution. Our expert team supports you throughout the process.<br>
+                    Would you be available for a quick meeting today to discuss how we can assist with your upcoming projects?
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Thomas Karen <span class="priority-badge badge-misc">Services</span></div>
+                            <div class="contact-subject">Subject: Grace Architecture & Cost Estimation Services</div>
+                            <div class="contact-email">thomaskaren.gracearchitectures@gmail.com</div>
+                        </div>
+                        <div class="contact-date">Mar 5, 2024 - 3:24 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hi,<br><br>
+
+                    We are writing to propose our architectural drafting / Estimating Services to Architects, Engineers, Contractors and Subcontractors. Our team of experienced architects, draftsmen and civil Engineers have a proven track record of delivering high-quality, accurate, and cost-effective services to clients in a variety of industries.<br><br>
+
+                    Our services include:<br><br>
+
+                    1-Estimating / Takeoff services<br>
+                    2-Architectural Design and Drafting Services<br><br>
+
+                    We are confident that our team can deliver the quality and reliability that you are looking for. Please let us know if you have any questions or would like to discuss the project in more detail. We look forward to the opportunity to work with you.<br><br>
+
+                    Cheers,<br><br>
+
+                    Thomas<br>
+                    Customer Success Manager<br>
+                    Grace Architecture & Estimating, LLC
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Carleen <span class="priority-badge badge-misc">Marketing</span></div>
+                            <div class="contact-subject">Subject: Your Website</div>
+                            <div class="contact-email">carleen-haughttmk2@akirateam.com</div>
+                        </div>
+                        <div class="contact-date">Mar 5, 2024 - 1:14 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hello!<br><br>
+
+                    I'm Carleen Haught, and I see that your website, Godwin Residential Construction, specializes in upscale and high-end residential construction services. I am pretty certain that we can get your website onto Page One of Google, Yahoo and Bing right away.<br><br>
+
+                    Head over to akirateam.com for details or visit akirateam.com/11yearexclusive.html for a huge discount.<br><br>
+
+                    Let me know asap,<br>
+                    Carleen
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Zachariah Bean <span class="priority-badge badge-misc">Follow-up</span></div>
+                            <div class="contact-subject">Subject: Follow-up</div>
+                            <div class="contact-email">zachariah.bean@drivecms.net</div>
+                        </div>
+                        <div class="contact-date">Feb 22, 2024 - 9:57 PM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hi Steve,<br><br>
+
+                    Get back to me, please.<br><br>
+
+                    Zachariah
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Sterling <span class="priority-badge badge-misc">Marketing</span></div>
+                            <div class="contact-subject">Subject: Your Website</div>
+                            <div class="contact-email">sterling-voelkerr2uz@theakirateam.com</div>
+                        </div>
+                        <div class="contact-date">Dec 18, 2024 - 1:03 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hello!<br><br>
+
+                    I'm Sterling Voelker, and I see that your website specializes in upscale residential construction and high-end interior design. I am pretty certain that we can get your website onto Page One of Google, Yahoo and Bing right away.<br><br>
+
+                    Head over to theakirateam.com for details or visit theakirateam.com/11yearexclusive.html for a huge discount.<br><br>
+
+                    Let me know asap,<br>
+                    Sterling
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Miguel Eli <span class="priority-badge badge-misc">Services</span></div>
+                            <div class="contact-subject">Subject: Explore Grace Architecture For Your Next Project</div>
+                            <div class="contact-email">miguel.gracearchitecturellc@gmail.com</div>
+                        </div>
+                        <div class="contact-date">Nov 8, 2024 - 2:00 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hi Dear,<br><br>
+
+                    Are you looking for a partner to handle your Cost Estimates and Architectural services?<br><br>
+
+                    Could you share the files and information about your project with me? This will help me to estimate the time and charges needed to complete your task. It can be the following:<br><br>
+
+                    1: Estimating / Takeoff Services.<br>
+                    2: Architectural Design and Drafting Services.<br>
+                    3: 3D Rendering Services.<br>
+                    4: Drawing Services.<br>
+                    5: Reference pictures Services.<br>
+                    6: Address of the site on Google Maps.<br><br>
+
+                    I would be very happy to serve you for your best. Thanks<br><br>
+
+                    Miguel Eli<br>
+                    Grace Architecture & Estimating, LLC
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Antonio Brandon <span class="priority-badge badge-misc">Services</span></div>
+                            <div class="contact-subject">Subject: Explore Grace Architecture For Your Next Project</div>
+                            <div class="contact-email">antonio.gracearchitecturellc@gmail.com</div>
+                        </div>
+                        <div class="contact-date">Nov 4, 2024 - 11:15 PM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hi Dear,<br><br>
+
+                    Are you looking for a partner to handle your cost estimates and architectural services?<br><br>
+
+                    Could you share the files and information about your project with me? This will help me to estimate the time and charges needed to complete your task. It can be the following:<br><br>
+
+                    1: Estimating / Takeoff Services.<br>
+                    2: Architectural Design and Drafting Services.<br>
+                    3: 3D Rendering Services.<br>
+                    4: Drawing Services.<br>
+                    5: Reference pictures Services.<br>
+                    6: Address of the site on Google Maps.<br><br>
+
+                    I would be very happy to serve you for your best. Thanks<br><br>
+
+                    Antonio Brandon<br>
+                    Grace Architecture & Estimating, LLC
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Oscar Lopez <span class="priority-badge badge-misc">Estimation</span></div>
+                            <div class="contact-subject">Subject: Estimating Services</div>
+                            <div class="contact-email">oscar@brinkbids.com</div>
+                        </div>
+                        <div class="contact-date">Oct 31, 2024 - 10:04 PM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Hi,<br><br>
+
+                    We are an estimating company that works on both residential and commercial projects.<br><br>
+
+                    Just send along the blueprints if you require specific estimates based on your scope.<br><br>
+
+                    Please let me know if you have any questions. Thank you.
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+
+            <div class="message-card priority-misc">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Ethan Charles <span class="priority-badge badge-misc">Estimation</span></div>
+                            <div class="contact-subject">Subject: Project Estimation Support</div>
+                            <div class="contact-email">ethanfastestimate@gmail.com</div>
+                        </div>
+                        <div class="contact-date">Oct 21, 2024 - 11:03 PM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    We use industry-leading tools like PlanSwift and Bluebeam to conduct precise take-offs, ensuring you get reliable estimates within twenty-four to thirty-six hours. Our commitment to accuracy and speed allows you to focus on other critical aspects of your projects.<br><br>
+
+                    Send us your project plans, and we'll provide a detailed quote and estimated turnaround time. Partner with us to enhance your bidding.
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this contact..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Administrative Inquiries</h2>
+            
+            <div class="message-card priority-admin">
+                <div class="message-header">
+                    <div class="contact-info">
+                        <div>
+                            <div class="contact-name">Stephanie Uhl <span class="priority-badge badge-admin">Admin</span></div>
+                            <div class="contact-subject">Subject: Inquiry</div>
+                            <div class="contact-email">suhl@magnals.com</div>
+                        </div>
+                        <div class="contact-date">May 2, 2024 - 2:03 AM</div>
+                    </div>
+                </div>
+                <div class="message-body">
+                    Good afternoon,<br><br>
+
+                    Please kindly provide me with the contact information for human resources or for the person who handle requests for employment records.<br><br>
+
+                    Thank you.
+                </div>
+                <div class="comment-section">
+                    <label class="comment-label">Comments & Notes:</label>
+                    <textarea class="comment-input" placeholder="Add your notes about this inquiry..."></textarea>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Auto-save comments to localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const textareas = document.querySelectorAll('.comment-input');
+            
+            textareas.forEach((textarea, index) => {
+                // Load saved comment
+                const savedComment = localStorage.getItem(`comment_${index}`);
+                if (savedComment) {
+                    textarea.value = savedComment;
+                }
+                
+                // Save comment on input
+                textarea.addEventListener('input', function() {
+                    localStorage.setItem(`comment_${index}`, this.value);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
